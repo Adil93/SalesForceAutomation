@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewObject
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="AppointmentInviteeRelationView"
+  Version="12.2.1.20.47"
+  InheritPersonalization="merge"
+  BindingStyle="OracleName"
+  CustomQuery="true"
+  PageIterMode="Full">
+  <DesignTime>
+    <Attr Name="_isExpertMode" Value="true"/>
+  </DesignTime>
+  <SQLQuery><![CDATA[SELECT AppointmentInviteeRelation.APPOINTMENT_ID,
+       AppointmentInviteeRelation.INVITEE_ID,
+       AppointmentInviteeRelation.INVITEE_TYPE
+FROM APPOINTMENT_INVITEE_RELATION AppointmentInviteeRelation]]></SQLQuery>
+  <ViewAttribute
+    Name="AppointmentId"
+    IsUpdateable="false"
+    IsPersistent="false"
+    IsNotNull="true"
+    PrecisionRule="true"
+    Precision="20"
+    Scale="0"
+    Type="java.math.BigInteger"
+    ColumnType="NUMBER"
+    AliasName="APPOINTMENT_ID"
+    Expression="APPOINTMENT_ID"
+    SQLType="NUMERIC"/>
+  <ViewAttribute
+    Name="InviteeId"
+    IsUpdateable="false"
+    IsPersistent="false"
+    IsNotNull="true"
+    PrecisionRule="true"
+    Precision="20"
+    Scale="0"
+    Type="java.math.BigInteger"
+    ColumnType="NUMBER"
+    AliasName="INVITEE_ID"
+    Expression="INVITEE_ID"
+    SQLType="NUMERIC"/>
+  <ViewAttribute
+    Name="InviteeType"
+    IsUpdateable="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Precision="30"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    AliasName="INVITEE_TYPE"
+    Expression="INVITEE_TYPE"
+    SQLType="VARCHAR">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="30"/>
+    </DesignTime>
+  </ViewAttribute>
+  <AttrArray Name="KeyAttributes">
+    <Item Value="AppointmentId"/>
+    <Item Value="InviteeId"/>
+    <Item Value="InviteeType"/>
+  </AttrArray>
+</ViewObject>

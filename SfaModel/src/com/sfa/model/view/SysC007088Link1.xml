@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE ViewLink SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewLink
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="SysC007088Link1"
+  Version="12.2.1.20.47"
+  InheritPersonalization="merge">
+  <ViewLinkDefEnd
+    Name="AddressView"
+    Cardinality="1"
+    Source="true"
+    Owner="com.sfa.model.view.AddressView">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_finderName" Value="AddressView"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="com.sfa.model.view.AddressView.AddressId"/>
+    </AttrArray>
+  </ViewLinkDefEnd>
+  <ViewLinkDefEnd
+    Name="CustomerContactView"
+    Cardinality="-1"
+    Owner="com.sfa.model.view.CustomerContactView">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_finderName" Value="CustomerContactView"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="com.sfa.model.view.CustomerContactView.AddressId"/>
+    </AttrArray>
+  </ViewLinkDefEnd>
+</ViewLink>

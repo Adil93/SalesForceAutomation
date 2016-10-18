@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+<!---->
+<Entity
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="RevenueitemEO"
+  Version="12.2.1.20.47"
+  InheritPersonalization="merge"
+  DBObjectType="table"
+  DBObjectName="REVENUEITEM"
+  AliasName="RevenueitemEO"
+  BindingStyle="OracleName">
+  <Attribute
+    Name="RevenueItemId"
+    IsNotNull="true"
+    Precision="20"
+    Scale="0"
+    ColumnName="REVENUE_ITEM_ID"
+    SQLType="NUMERIC"
+    Type="java.math.BigInteger"
+    ColumnType="NUMBER"
+    TableName="REVENUEITEM"
+    PrimaryKey="true"/>
+  <Attribute
+    Name="OpportunityId"
+    Precision="20"
+    Scale="0"
+    ColumnName="OPPORTUNITY_ID"
+    SQLType="NUMERIC"
+    Type="java.math.BigInteger"
+    ColumnType="NUMBER"
+    TableName="REVENUEITEM"/>
+  <Attribute
+    Name="ProductId"
+    Precision="20"
+    Scale="0"
+    ColumnName="PRODUCT_ID"
+    SQLType="NUMERIC"
+    Type="java.math.BigInteger"
+    ColumnType="NUMBER"
+    TableName="REVENUEITEM"/>
+  <Attribute
+    Name="Quantity"
+    Precision="20"
+    Scale="0"
+    ColumnName="QUANTITY"
+    SQLType="NUMERIC"
+    Type="java.math.BigInteger"
+    ColumnType="NUMBER"
+    TableName="REVENUEITEM"/>
+  <Attribute
+    Name="EstimatedPrice"
+    Precision="20"
+    Scale="0"
+    ColumnName="ESTIMATED_PRICE"
+    SQLType="NUMERIC"
+    Type="java.math.BigInteger"
+    ColumnType="NUMBER"
+    TableName="REVENUEITEM"/>
+  <Attribute
+    Name="Revenue"
+    Precision="20"
+    Scale="0"
+    ColumnName="REVENUE"
+    SQLType="NUMERIC"
+    Type="java.math.BigInteger"
+    ColumnType="NUMBER"
+    TableName="REVENUEITEM"/>
+  <Attribute
+    Name="WinProbability"
+    Precision="3"
+    Scale="0"
+    ColumnName="WIN_PROBABILITY"
+    SQLType="NUMERIC"
+    Type="java.lang.Integer"
+    ColumnType="NUMBER"
+    TableName="REVENUEITEM"/>
+  <Attribute
+    Name="BestCaseRevenue"
+    Precision="20"
+    Scale="0"
+    ColumnName="BEST_CASE_REVENUE"
+    SQLType="NUMERIC"
+    Type="java.math.BigInteger"
+    ColumnType="NUMBER"
+    TableName="REVENUEITEM"/>
+  <Attribute
+    Name="WorstCaseRevenue"
+    Precision="20"
+    Scale="0"
+    ColumnName="WORST_CASE_REVENUE"
+    SQLType="NUMERIC"
+    Type="java.math.BigInteger"
+    ColumnType="NUMBER"
+    TableName="REVENUEITEM"/>
+  <Attribute
+    Name="CreationDate"
+    ColumnName="CREATION_DATE"
+    SQLType="DATE"
+    Type="java.sql.Timestamp"
+    ColumnType="DATE"
+    TableName="REVENUEITEM"/>
+  <Attribute
+    Name="ModifiedDate"
+    ColumnName="MODIFIED_DATE"
+    SQLType="DATE"
+    Type="java.sql.Timestamp"
+    ColumnType="DATE"
+    TableName="REVENUEITEM"/>
+  <Attribute
+    Name="CreatedBy"
+    Precision="20"
+    Scale="0"
+    ColumnName="CREATED_BY"
+    SQLType="NUMERIC"
+    Type="java.math.BigInteger"
+    ColumnType="NUMBER"
+    TableName="REVENUEITEM"/>
+  <Attribute
+    Name="ModifiedBy"
+    Precision="20"
+    Scale="0"
+    ColumnName="MODIFIED_BY"
+    SQLType="NUMERIC"
+    Type="java.math.BigInteger"
+    ColumnType="NUMBER"
+    TableName="REVENUEITEM"/>
+  <Attribute
+    Name="Description"
+    Precision="500"
+    ColumnName="DESCRIPTION"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="REVENUEITEM">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="500"/>
+    </DesignTime>
+  </Attribute>
+  <AccessorAttribute
+    Name="OpportunityEO"
+    Association="com.sfa.model.entity.SysC007115Assoc"
+    AssociationEnd="com.sfa.model.entity.SysC007115Assoc.OpportunityEO"
+    AssociationOtherEnd="com.sfa.model.entity.SysC007115Assoc.RevenueitemEO"
+    Type="oracle.jbo.server.EntityImpl"
+    IsUpdateable="true"/>
+  <AccessorAttribute
+    Name="ProductEO"
+    Association="com.sfa.model.entity.SysC007116Assoc"
+    AssociationEnd="com.sfa.model.entity.SysC007116Assoc.ProductEO"
+    AssociationOtherEnd="com.sfa.model.entity.SysC007116Assoc.RevenueitemEO"
+    Type="oracle.jbo.server.EntityImpl"
+    IsUpdateable="true"/>
+  <AccessorAttribute
+    Name="UsersEO"
+    Association="com.sfa.model.entity.SysC007118Assoc"
+    AssociationEnd="com.sfa.model.entity.SysC007118Assoc.UsersEO"
+    AssociationOtherEnd="com.sfa.model.entity.SysC007118Assoc.RevenueitemEO"
+    Type="oracle.jbo.server.EntityImpl"
+    IsUpdateable="true"/>
+  <AccessorAttribute
+    Name="UsersEO1"
+    Association="com.sfa.model.entity.SysC007117Assoc"
+    AssociationEnd="com.sfa.model.entity.SysC007117Assoc.UsersEO1"
+    AssociationOtherEnd="com.sfa.model.entity.SysC007117Assoc.RevenueitemEO1"
+    Type="oracle.jbo.server.EntityImpl"
+    IsUpdateable="true"/>
+  <Key
+    Name="SysC007114"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="SYS_C007114"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="com.sfa.model.entity.RevenueitemEO.RevenueItemId"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="SysC007115">
+    <DesignTime>
+      <Attr Name="_referencedKey" Value="SYS_C007096"/>
+      <Attr Name="_isForeign" Value="true"/>
+      <Attr Name="_DBObjectName" Value="SYS_C007115"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="com.sfa.model.entity.RevenueitemEO.OpportunityId"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="SysC007116">
+    <DesignTime>
+      <Attr Name="_referencedKey" Value="SYS_C007108"/>
+      <Attr Name="_isForeign" Value="true"/>
+      <Attr Name="_DBObjectName" Value="SYS_C007116"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="com.sfa.model.entity.RevenueitemEO.ProductId"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="SysC007117">
+    <DesignTime>
+      <Attr Name="_referencedKey" Value="SYS_C007046"/>
+      <Attr Name="_isForeign" Value="true"/>
+      <Attr Name="_DBObjectName" Value="SYS_C007117"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="com.sfa.model.entity.RevenueitemEO.CreatedBy"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="SysC007118">
+    <DesignTime>
+      <Attr Name="_referencedKey" Value="SYS_C007046"/>
+      <Attr Name="_isForeign" Value="true"/>
+      <Attr Name="_DBObjectName" Value="SYS_C007118"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="com.sfa.model.entity.RevenueitemEO.ModifiedBy"/>
+    </AttrArray>
+  </Key>
+</Entity>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE ViewLink SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewLink
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="SysC007116Link1"
+  Version="12.2.1.20.47"
+  InheritPersonalization="merge">
+  <ViewLinkDefEnd
+    Name="ProductView"
+    Cardinality="1"
+    Source="true"
+    Owner="com.sfa.model.view.ProductView">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_finderName" Value="ProductView"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="com.sfa.model.view.ProductView.ProductId"/>
+    </AttrArray>
+  </ViewLinkDefEnd>
+  <ViewLinkDefEnd
+    Name="RevenueitemView"
+    Cardinality="-1"
+    Owner="com.sfa.model.view.RevenueitemView">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_finderName" Value="RevenueitemView"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="com.sfa.model.view.RevenueitemView.ProductId"/>
+    </AttrArray>
+  </ViewLinkDefEnd>
+</ViewLink>
