@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE Association SYSTEM "jbo_03_01.dtd">
+<!---->
+<Association
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="SysC007090Assoc"
+  Version="12.2.1.20.47"
+  InheritPersonalization="merge">
+  <DesignTime>
+    <Attr Name="_isCodegen" Value="true"/>
+  </DesignTime>
+  <AssociationEnd
+    Name="DepartmentEO"
+    Cardinality="1"
+    Source="true"
+    Owner="com.sfa.model.entity.DepartmentEO">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_aggregation" Value="0"/>
+      <Attr Name="_finderName" Value="DepartmentEO"/>
+      <Attr Name="_foreignKey" Value="com.sfa.model.entity.DepartmentEO.SysC007084"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="com.sfa.model.entity.DepartmentEO.DepartmentId"/>
+    </AttrArray>
+  </AssociationEnd>
+  <AssociationEnd
+    Name="CustomerContactEO"
+    Cardinality="-1"
+    Owner="com.sfa.model.entity.CustomerContactEO">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_aggregation" Value="0"/>
+      <Attr Name="_finderName" Value="CustomerContactEO"/>
+      <Attr Name="_foreignKey" Value="com.sfa.model.entity.CustomerContactEO.SysC007090"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="com.sfa.model.entity.CustomerContactEO.DepartmentId"/>
+    </AttrArray>
+  </AssociationEnd>
+</Association>

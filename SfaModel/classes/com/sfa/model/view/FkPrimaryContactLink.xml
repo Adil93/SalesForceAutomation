@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE ViewLink SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewLink
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="FkPrimaryContactLink"
+  Version="12.2.1.20.47"
+  InheritPersonalization="merge"
+  EntityAssociation="com.sfa.model.entity.FkPrimaryContactAssoc">
+  <ViewLinkDefEnd
+    Name="CustomerContactEOView"
+    Cardinality="1"
+    Source="true"
+    Owner="com.sfa.model.view.CustomerContactEOView">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_finderName" Value="CustomerContactEOView"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="com.sfa.model.view.CustomerContactEOView.ContactId"/>
+    </AttrArray>
+  </ViewLinkDefEnd>
+  <ViewLinkDefEnd
+    Name="CustomerAccountEOView"
+    Cardinality="-1"
+    Owner="com.sfa.model.view.CustomerAccountEOView">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_finderName" Value="CustomerAccountEOView"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="com.sfa.model.view.CustomerAccountEOView.PrimaryContactId"/>
+    </AttrArray>
+  </ViewLinkDefEnd>
+</ViewLink>
