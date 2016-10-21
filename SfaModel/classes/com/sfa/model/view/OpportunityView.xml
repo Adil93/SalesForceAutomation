@@ -53,7 +53,7 @@ FROM OPPORTUNITY Opportunity]]></SQLQuery>
     ColumnType="DATE"
     AliasName="CLOSE_DATE"
     Expression="CLOSE_DATE"
-    SQLType="DATE"/>
+    SQLType="TIMESTAMP"/>
   <ViewAttribute
     Name="PrimaryContactId"
     IsUpdateable="false"
@@ -185,7 +185,7 @@ FROM OPPORTUNITY Opportunity]]></SQLQuery>
     ColumnType="NUMBER"
     AliasName="ESTIMATED_DURATION_DAYS"
     Expression="ESTIMATED_DURATION_DAYS"
-    SQLType="NUMERIC"/>
+    SQLType="FLOAT"/>
   <ViewAttribute
     Name="RiskLevel"
     IsUpdateable="false"
@@ -210,7 +210,7 @@ FROM OPPORTUNITY Opportunity]]></SQLQuery>
     ColumnType="DATE"
     AliasName="CREATION_DATE"
     Expression="CREATION_DATE"
-    SQLType="DATE"/>
+    SQLType="TIMESTAMP"/>
   <ViewAttribute
     Name="ModifiedDate"
     IsUpdateable="false"
@@ -220,7 +220,7 @@ FROM OPPORTUNITY Opportunity]]></SQLQuery>
     ColumnType="DATE"
     AliasName="MODIFIED_DATE"
     Expression="MODIFIED_DATE"
-    SQLType="DATE"/>
+    SQLType="TIMESTAMP"/>
   <ViewAttribute
     Name="CreatedBy"
     IsUpdateable="false"

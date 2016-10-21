@@ -20,9 +20,15 @@
   <ListBinding
     Name="LOV_RelatedOpportunityId"
     ListVOName="OpportunityEOView1"
+<<<<<<< HEAD
     ComboRowCountHint="10"
     NullValueFlag="none"
     MRUCount="0">
+=======
+    NullValueFlag="none"
+    MRUCount="0"
+    ComboRowCountHint="10">
+>>>>>>> 72e5b9353e5717e58a9f55ba333a8c7ef3bb1a36
     <AttrArray Name="AttrNames">
       <Item Value="RelatedOpportunityId"/>
     </AttrArray>
@@ -33,8 +39,12 @@
     <AttrArray Name="ListDisplayAttrNames">
       <Item Value="OpportunityName"/>
     </AttrArray>
+<<<<<<< HEAD
     <DisplayCriteria
       Hint="showAndExecute"/>
+=======
+    <DisplayCriteria/>
+>>>>>>> 72e5b9353e5717e58a9f55ba333a8c7ef3bb1a36
   </ListBinding>
   <EntityUsage
     Name="AppointmentEO"
@@ -58,19 +68,39 @@
     PrecisionRule="true"
     EntityAttrName="AppointmentType"
     EntityUsage="AppointmentEO"
-    AliasName="APPOINTMENT_TYPE"/>
+    AliasName="APPOINTMENT_TYPE">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="StartTime"
     PrecisionRule="true"
     EntityAttrName="StartTime"
     EntityUsage="AppointmentEO"
-    AliasName="START_TIME"/>
+    AliasName="START_TIME">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="date"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="EndTime"
     PrecisionRule="true"
     EntityAttrName="EndTime"
     EntityUsage="AppointmentEO"
-    AliasName="END_TIME"/>
+    AliasName="END_TIME">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="date"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="Location"
     PrecisionRule="true"
