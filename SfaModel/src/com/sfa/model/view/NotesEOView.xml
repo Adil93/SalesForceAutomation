@@ -54,23 +54,51 @@
     PrecisionRule="true"
     EntityAttrName="CreationDate"
     EntityUsage="NotesEO"
-    AliasName="CREATION_DATE"/>
+    AliasName="CREATION_DATE">
+    <Properties>
+      <SchemaBasedProperties>
+        <DISPLAYHINT
+          Value="Hide"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="ModifiedDate"
     PrecisionRule="true"
     EntityAttrName="ModifiedDate"
     EntityUsage="NotesEO"
-    AliasName="MODIFIED_DATE"/>
+    AliasName="MODIFIED_DATE">
+    <Properties>
+      <SchemaBasedProperties>
+        <DISPLAYHINT
+          Value="Hide"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="CreatedBy"
     PrecisionRule="true"
     EntityAttrName="CreatedBy"
     EntityUsage="NotesEO"
-    AliasName="CREATED_BY"/>
+    AliasName="CREATED_BY">
+    <Properties>
+      <SchemaBasedProperties>
+        <DISPLAYHINT
+          Value="Hide"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="ModifiedBy"
     PrecisionRule="true"
     EntityAttrName="ModifiedBy"
     EntityUsage="NotesEO"
-    AliasName="MODIFIED_BY"/>
+    AliasName="MODIFIED_BY">
+    <Properties>
+      <SchemaBasedProperties>
+        <DISPLAYHINT
+          Value="Hide"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
 </ViewObject>

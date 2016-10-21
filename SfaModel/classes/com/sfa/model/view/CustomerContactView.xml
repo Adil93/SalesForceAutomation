@@ -225,7 +225,14 @@ FROM CUSTOMER_CONTACT CustomerContact]]></SQLQuery>
     ColumnType="NUMBER"
     AliasName="CREATED_BY"
     Expression="CREATED_BY"
-    SQLType="NUMERIC"/>
+    SQLType="NUMERIC">
+    <Properties>
+      <SchemaBasedProperties>
+        <DISPLAYHINT
+          Value="Hide"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="CreationDate"
     IsUpdateable="false"
@@ -235,7 +242,14 @@ FROM CUSTOMER_CONTACT CustomerContact]]></SQLQuery>
     ColumnType="DATE"
     AliasName="CREATION_DATE"
     Expression="CREATION_DATE"
-    SQLType="DATE"/>
+    SQLType="DATE">
+    <Properties>
+      <SchemaBasedProperties>
+        <DISPLAYHINT
+          Value="Hide"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="ModifiedBy"
     IsUpdateable="false"
@@ -247,7 +261,14 @@ FROM CUSTOMER_CONTACT CustomerContact]]></SQLQuery>
     ColumnType="NUMBER"
     AliasName="MODIFIED_BY"
     Expression="MODIFIED_BY"
-    SQLType="NUMERIC"/>
+    SQLType="NUMERIC">
+    <Properties>
+      <SchemaBasedProperties>
+        <DISPLAYHINT
+          Value="Hide"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="ModifiedDate"
     IsUpdateable="false"
@@ -257,7 +278,14 @@ FROM CUSTOMER_CONTACT CustomerContact]]></SQLQuery>
     ColumnType="DATE"
     AliasName="MODIFIED_DATE"
     Expression="MODIFIED_DATE"
-    SQLType="DATE"/>
+    SQLType="DATE">
+    <Properties>
+      <SchemaBasedProperties>
+        <DISPLAYHINT
+          Value="Hide"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="Description"
     IsUpdateable="false"
