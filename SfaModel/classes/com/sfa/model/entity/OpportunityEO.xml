@@ -194,6 +194,21 @@
       <Attr Name="_DisplaySize" Value="500"/>
     </DesignTime>
   </Attribute>
+  <Attribute
+    Name="OpportunityName"
+    Precision="100"
+    ColumnName="OPPORTUNITY_NAME"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="OPPORTUNITY">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="com.sfa.model.entity.OpportunityEO.OpportunityName_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Attribute>
   <AccessorAttribute
     Name="InteractionEO"
     Association="com.sfa.model.entity.SysC007103Assoc"
@@ -272,4 +287,8 @@
       <Item Value="com.sfa.model.entity.OpportunityEO.ModifiedBy"/>
     </AttrArray>
   </Key>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="com.sfa.model.SfaModelBundle"/>
+  </ResourceBundle>
 </Entity>
