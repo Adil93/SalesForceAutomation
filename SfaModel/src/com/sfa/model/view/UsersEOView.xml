@@ -13,6 +13,28 @@
   CustomQuery="false"
   SelectAllAttributes="false"
   PageIterMode="Full">
+  <ViewAccessor
+    Name="RolesEOView1"
+    ViewObjectName="com.sfa.model.view.RolesEOView"
+    RowLevelBinds="true"/>
+  <ListBinding
+    Name="LOV_RoleId"
+    ListVOName="RolesEOView1"
+    ComboRowCountHint="10"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="RoleId"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="RoleId"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="RoleName"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
   <EntityUsage
     Name="UsersEO"
     Entity="com.sfa.model.entity.UsersEO"/>
@@ -69,7 +91,17 @@
     PrecisionRule="true"
     EntityAttrName="RoleId"
     EntityUsage="UsersEO"
-    AliasName="ROLE_ID"/>
+    AliasName="ROLE_ID"
+    LOVName="LOV_RoleId">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="combo_lov"/>
+        <LABEL
+          ResId="com.sfa.model.view.UsersEOView.RoleId_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="SupervisorEmpId"
     PrecisionRule="true"
@@ -241,4 +273,8 @@
     ViewLink="com.sfa.model.view.SysC007098Link"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="com.sfa.model.SfaModelBundle"/>
+  </ResourceBundle>
 </ViewObject>

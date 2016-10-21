@@ -13,6 +13,72 @@
   CustomQuery="false"
   SelectAllAttributes="false"
   PageIterMode="Full">
+  <ViewAccessor
+    Name="OpportunityEOView1"
+    ViewObjectName="com.sfa.model.view.OpportunityEOView"
+    RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="ParentTypeView1"
+    ViewObjectName="com.sfa.model.view.ParentTypeView"
+    RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="AppointmentTypeView1"
+    ViewObjectName="com.sfa.model.view.AppointmentTypeView"
+    RowLevelBinds="true"/>
+  <ListBinding
+    Name="LOV_RelatedOpportunityId"
+    ListVOName="OpportunityEOView1"
+    ComboRowCountHint="10"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="RelatedOpportunityId"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="OpportunityId"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="OpportunityName"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_ParentType"
+    ListVOName="ParentTypeView1"
+    NullValueFlag="start"
+    NullValueId="${adfBundle['oracle.javatools.resourcebundle.SystemBundle']['NULL_VALUE_RESID']}"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="ParentType"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="type"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="type"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_AppointmentType"
+    ListVOName="AppointmentTypeView1"
+    ComboRowCountHint="10"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="AppointmentType"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="type"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="type"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
   <EntityUsage
     Name="AppointmentEO"
     Entity="com.sfa.model.entity.AppointmentEO"/>
@@ -29,25 +95,66 @@
     PrecisionRule="true"
     EntityAttrName="Name"
     EntityUsage="AppointmentEO"
-    AliasName="NAME"/>
+    AliasName="NAME">
+    <Properties>
+      <SchemaBasedProperties>
+        <DISPLAYWIDTH
+          Value="30"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="AppointmentType"
     PrecisionRule="true"
     EntityAttrName="AppointmentType"
     EntityUsage="AppointmentEO"
-    AliasName="APPOINTMENT_TYPE"/>
+    AliasName="APPOINTMENT_TYPE"
+    LOVName="LOV_AppointmentType">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="combo_lov"/>
+        <DISPLAYWIDTH
+          Value="10"/>
+        <LABEL
+          ResId="com.sfa.model.view.AppointmentEOView.AppointmentType_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="StartTime"
     PrecisionRule="true"
     EntityAttrName="StartTime"
     EntityUsage="AppointmentEO"
-    AliasName="START_TIME"/>
+    AliasName="START_TIME">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="com.sfa.model.view.AppointmentEOView.StartTime_LABEL"/>
+        <CONTROLTYPE
+          Value="date"/>
+        <DISPLAYWIDTH
+          Value="14"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="EndTime"
     PrecisionRule="true"
     EntityAttrName="EndTime"
     EntityUsage="AppointmentEO"
-    AliasName="END_TIME"/>
+    AliasName="END_TIME">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="com.sfa.model.view.AppointmentEOView.EndTime_LABEL"/>
+        <CONTROLTYPE
+          Value="date"/>
+        <DISPLAYWIDTH
+          Value="14"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="Location"
     PrecisionRule="true"
@@ -59,43 +166,98 @@
     PrecisionRule="true"
     EntityAttrName="RelatedOpportunityId"
     EntityUsage="AppointmentEO"
-    AliasName="RELATED_OPPORTUNITY_ID"/>
+    AliasName="RELATED_OPPORTUNITY_ID"
+    LOVName="LOV_RelatedOpportunityId">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="combo_lov"/>
+        <LABEL
+          ResId="com.sfa.model.view.AppointmentEOView.RelatedOpportunityId_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="ParentId"
     PrecisionRule="true"
     EntityAttrName="ParentId"
     EntityUsage="AppointmentEO"
-    AliasName="PARENT_ID"/>
+    AliasName="PARENT_ID">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="com.sfa.model.view.AppointmentEOView.ParentId_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="ParentType"
     PrecisionRule="true"
     EntityAttrName="ParentType"
     EntityUsage="AppointmentEO"
-    AliasName="PARENT_TYPE"/>
+    AliasName="PARENT_TYPE"
+    LOVName="LOV_ParentType">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="com.sfa.model.view.AppointmentEOView.ParentType_LABEL"/>
+        <CONTROLTYPE
+          Value="choice"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="CreationDate"
     PrecisionRule="true"
     EntityAttrName="CreationDate"
     EntityUsage="AppointmentEO"
-    AliasName="CREATION_DATE"/>
+    AliasName="CREATION_DATE">
+    <Properties>
+      <SchemaBasedProperties>
+        <DISPLAYHINT
+          Value="Hide"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="ModifiedDate"
     PrecisionRule="true"
     EntityAttrName="ModifiedDate"
     EntityUsage="AppointmentEO"
-    AliasName="MODIFIED_DATE"/>
+    AliasName="MODIFIED_DATE">
+    <Properties>
+      <SchemaBasedProperties>
+        <DISPLAYHINT
+          Value="Hide"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="CreatedBy"
     PrecisionRule="true"
     EntityAttrName="CreatedBy"
     EntityUsage="AppointmentEO"
-    AliasName="CREATED_BY"/>
+    AliasName="CREATED_BY">
+    <Properties>
+      <SchemaBasedProperties>
+        <DISPLAYHINT
+          Value="Hide"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="ModifiedBy"
     PrecisionRule="true"
     EntityAttrName="ModifiedBy"
     EntityUsage="AppointmentEO"
-    AliasName="MODIFIED_BY"/>
+    AliasName="MODIFIED_BY">
+    <Properties>
+      <SchemaBasedProperties>
+        <DISPLAYHINT
+          Value="Hide"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="Description"
     PrecisionRule="true"
@@ -107,4 +269,8 @@
     ViewLink="com.sfa.model.view.SysC007095Link"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="com.sfa.model.SfaModelBundle"/>
+  </ResourceBundle>
 </ViewObject>

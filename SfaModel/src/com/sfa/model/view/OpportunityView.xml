@@ -12,24 +12,25 @@
   <DesignTime>
     <Attr Name="_isExpertMode" Value="true"/>
   </DesignTime>
-  <SQLQuery><![CDATA[SELECT Opportunity.OPPORTUNITY_ID,
-       Opportunity.CLOSE_DATE,
-       Opportunity.PRIMARY_CONTACT_ID,
-       Opportunity.SALES_STAGE,
-       Opportunity.SALES_METHOD,
-       Opportunity.SALES_CHANNEL,
-       Opportunity.REVENUE,
-       Opportunity.BEST_CASE_REVENUE,
-       Opportunity.WORST_CASE_REVENUE,
-       Opportunity.IS_BUDGETED,
-       Opportunity.BUDGET_AMOUNT_IF_AVAIL,
-       Opportunity.ESTIMATED_DURATION_DAYS,
-       Opportunity.RISK_LEVEL,
-       Opportunity.CREATION_DATE,
-       Opportunity.MODIFIED_DATE,
-       Opportunity.CREATED_BY,
-       Opportunity.MODIFIED_BY,
-       Opportunity.DESCRIPTION
+  <SQLQuery><![CDATA[SELECT Opportunity.OPPORTUNITY_ID,   
+       Opportunity.OPPORTUNITY_NAME,   
+       Opportunity.CLOSE_DATE,   
+       Opportunity.PRIMARY_CONTACT_ID,   
+       Opportunity.SALES_STAGE,   
+       Opportunity.SALES_METHOD,   
+       Opportunity.SALES_CHANNEL,   
+       Opportunity.REVENUE,   
+       Opportunity.BEST_CASE_REVENUE,   
+       Opportunity.WORST_CASE_REVENUE,   
+       Opportunity.IS_BUDGETED,   
+       Opportunity.BUDGET_AMOUNT_IF_AVAIL,   
+       Opportunity.ESTIMATED_DURATION_DAYS,   
+       Opportunity.RISK_LEVEL,   
+       Opportunity.CREATION_DATE,   
+       Opportunity.MODIFIED_DATE,   
+       Opportunity.CREATED_BY,   
+       Opportunity.MODIFIED_BY,   
+       Opportunity.DESCRIPTION   
 FROM OPPORTUNITY Opportunity]]></SQLQuery>
   <ViewAttribute
     Name="OpportunityId"
@@ -53,7 +54,7 @@ FROM OPPORTUNITY Opportunity]]></SQLQuery>
     ColumnType="DATE"
     AliasName="CLOSE_DATE"
     Expression="CLOSE_DATE"
-    SQLType="DATE"/>
+    SQLType="TIMESTAMP"/>
   <ViewAttribute
     Name="PrimaryContactId"
     IsUpdateable="false"
@@ -185,7 +186,7 @@ FROM OPPORTUNITY Opportunity]]></SQLQuery>
     ColumnType="NUMBER"
     AliasName="ESTIMATED_DURATION_DAYS"
     Expression="ESTIMATED_DURATION_DAYS"
-    SQLType="NUMERIC"/>
+    SQLType="FLOAT"/>
   <ViewAttribute
     Name="RiskLevel"
     IsUpdateable="false"
@@ -210,7 +211,7 @@ FROM OPPORTUNITY Opportunity]]></SQLQuery>
     ColumnType="DATE"
     AliasName="CREATION_DATE"
     Expression="CREATION_DATE"
-    SQLType="DATE"/>
+    SQLType="TIMESTAMP"/>
   <ViewAttribute
     Name="ModifiedDate"
     IsUpdateable="false"
@@ -220,7 +221,7 @@ FROM OPPORTUNITY Opportunity]]></SQLQuery>
     ColumnType="DATE"
     AliasName="MODIFIED_DATE"
     Expression="MODIFIED_DATE"
-    SQLType="DATE"/>
+    SQLType="TIMESTAMP"/>
   <ViewAttribute
     Name="CreatedBy"
     IsUpdateable="false"

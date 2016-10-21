@@ -23,7 +23,6 @@
     PrimaryKey="true">
     <TransientExpression
       Name="ExpressionScript"
-      trustMode="trusted"
       CodeSourceName="AppointmentEORow"/>
     <RecalcCondition
       Name="RecalcExpressionScript"
@@ -45,7 +44,7 @@
   </Attribute>
   <Attribute
     Name="AppointmentType"
-    Precision="500"
+    Precision="50"
     ColumnName="APPOINTMENT_TYPE"
     SQLType="VARCHAR"
     Type="java.lang.String"
@@ -102,11 +101,10 @@
   <Attribute
     Name="ParentType"
     Precision="30"
-    Scale="0"
     ColumnName="PARENT_TYPE"
     SQLType="NUMERIC"
-    Type="java.math.BigInteger"
-    ColumnType="NUMBER"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
     TableName="APPOINTMENT"/>
   <Attribute
     Name="CreationDate"
