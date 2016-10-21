@@ -13,39 +13,6 @@
   CustomQuery="false"
   SelectAllAttributes="false"
   PageIterMode="Full">
-  <ViewAccessor
-    Name="OpportunityEOView1"
-    ViewObjectName="com.sfa.model.view.OpportunityEOView"
-    RowLevelBinds="true"/>
-  <ListBinding
-    Name="LOV_RelatedOpportunityId"
-    ListVOName="OpportunityEOView1"
-<<<<<<< HEAD
-    ComboRowCountHint="10"
-    NullValueFlag="none"
-    MRUCount="0">
-=======
-    NullValueFlag="none"
-    MRUCount="0"
-    ComboRowCountHint="10">
->>>>>>> 72e5b9353e5717e58a9f55ba333a8c7ef3bb1a36
-    <AttrArray Name="AttrNames">
-      <Item Value="RelatedOpportunityId"/>
-    </AttrArray>
-    <AttrArray Name="AttrExpressions"/>
-    <AttrArray Name="ListAttrNames">
-      <Item Value="OpportunityId"/>
-    </AttrArray>
-    <AttrArray Name="ListDisplayAttrNames">
-      <Item Value="OpportunityName"/>
-    </AttrArray>
-<<<<<<< HEAD
-    <DisplayCriteria
-      Hint="showAndExecute"/>
-=======
-    <DisplayCriteria/>
->>>>>>> 72e5b9353e5717e58a9f55ba333a8c7ef3bb1a36
-  </ListBinding>
   <EntityUsage
     Name="AppointmentEO"
     Entity="com.sfa.model.entity.AppointmentEO"/>
@@ -68,39 +35,19 @@
     PrecisionRule="true"
     EntityAttrName="AppointmentType"
     EntityUsage="AppointmentEO"
-    AliasName="APPOINTMENT_TYPE">
-    <Properties>
-      <SchemaBasedProperties>
-        <CONTROLTYPE/>
-      </SchemaBasedProperties>
-    </Properties>
-  </ViewAttribute>
+    AliasName="APPOINTMENT_TYPE"/>
   <ViewAttribute
     Name="StartTime"
     PrecisionRule="true"
     EntityAttrName="StartTime"
     EntityUsage="AppointmentEO"
-    AliasName="START_TIME">
-    <Properties>
-      <SchemaBasedProperties>
-        <CONTROLTYPE
-          Value="date"/>
-      </SchemaBasedProperties>
-    </Properties>
-  </ViewAttribute>
+    AliasName="START_TIME"/>
   <ViewAttribute
     Name="EndTime"
     PrecisionRule="true"
     EntityAttrName="EndTime"
     EntityUsage="AppointmentEO"
-    AliasName="END_TIME">
-    <Properties>
-      <SchemaBasedProperties>
-        <CONTROLTYPE
-          Value="date"/>
-      </SchemaBasedProperties>
-    </Properties>
-  </ViewAttribute>
+    AliasName="END_TIME"/>
   <ViewAttribute
     Name="Location"
     PrecisionRule="true"
@@ -112,15 +59,7 @@
     PrecisionRule="true"
     EntityAttrName="RelatedOpportunityId"
     EntityUsage="AppointmentEO"
-    AliasName="RELATED_OPPORTUNITY_ID"
-    LOVName="LOV_RelatedOpportunityId">
-    <Properties>
-      <SchemaBasedProperties>
-        <CONTROLTYPE
-          Value="combo_lov"/>
-      </SchemaBasedProperties>
-    </Properties>
-  </ViewAttribute>
+    AliasName="RELATED_OPPORTUNITY_ID"/>
   <ViewAttribute
     Name="ParentId"
     PrecisionRule="true"
