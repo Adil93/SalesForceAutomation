@@ -6,10 +6,28 @@
   Name="SfaModel"
   Version="12.2.1.20.47"
   SeparateXMLFiles="true"
-  PackageName="com.sfa.model"
-  ExportIntfPackage="">
+  PackageName="com.sfa.model">
   <DesignTime>
     <Attr Name="_DTExpressionTypeChecking" Value="true"/>
     <Attr Name="_jprName" Value="../../../../SfaModel.jpr"/>
   </DesignTime>
+  <Containee
+    Name="entity"
+    PackageName="com.sfa.model.entity"
+    ObjectType="JboPackage">
+    <DesignTime>
+      <Attr Name="_AS" Value="true"/>
+      <Attr Name="_EO" Value="true"/>
+      <Attr Name="_AM" Value="true"/>
+    </DesignTime>
+  </Containee>
+  <Containee
+    Name="view"
+    PackageName="com.sfa.model.view"
+    ObjectType="JboPackage">
+    <DesignTime>
+      <Attr Name="_VL" Value="true"/>
+      <Attr Name="_VO" Value="true"/>
+    </DesignTime>
+  </Containee>
 </JboProject>

@@ -24,6 +24,12 @@
     EntityUsage="OpportunityEO"
     AliasName="OPPORTUNITY_ID"/>
   <ViewAttribute
+    Name="OpportunityName"
+    PrecisionRule="true"
+    EntityAttrName="OpportunityName"
+    EntityUsage="OpportunityEO"
+    AliasName="OPPORTUNITY_NAME"/>
+  <ViewAttribute
     Name="CloseDate"
     PrecisionRule="true"
     EntityAttrName="CloseDate"

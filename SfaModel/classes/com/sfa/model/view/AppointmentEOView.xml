@@ -13,6 +13,29 @@
   CustomQuery="false"
   SelectAllAttributes="false"
   PageIterMode="Full">
+  <ViewAccessor
+    Name="OpportunityEOView1"
+    ViewObjectName="com.sfa.model.view.OpportunityEOView"
+    RowLevelBinds="true"/>
+  <ListBinding
+    Name="LOV_RelatedOpportunityId"
+    ListVOName="OpportunityEOView1"
+    ComboRowCountHint="10"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="RelatedOpportunityId"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="OpportunityId"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="OpportunityName"/>
+    </AttrArray>
+    <DisplayCriteria
+      Hint="showAndExecute"/>
+  </ListBinding>
   <EntityUsage
     Name="AppointmentEO"
     Entity="com.sfa.model.entity.AppointmentEO"/>
@@ -59,7 +82,15 @@
     PrecisionRule="true"
     EntityAttrName="RelatedOpportunityId"
     EntityUsage="AppointmentEO"
-    AliasName="RELATED_OPPORTUNITY_ID"/>
+    AliasName="RELATED_OPPORTUNITY_ID"
+    LOVName="LOV_RelatedOpportunityId">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="combo_lov"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="ParentId"
     PrecisionRule="true"
