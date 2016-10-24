@@ -85,7 +85,15 @@
     PrecisionRule="true"
     EntityAttrName="Password"
     EntityUsage="UsersEO"
-    AliasName="PASSWORD"/>
+    AliasName="PASSWORD">
+    <Properties>
+      <CustomProperties>
+        <Property
+          Name="Property"
+          ResId="com.sfa.model.view.UsersEOView.Password.Property_VALUE"/>
+      </CustomProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="RoleId"
     PrecisionRule="true"

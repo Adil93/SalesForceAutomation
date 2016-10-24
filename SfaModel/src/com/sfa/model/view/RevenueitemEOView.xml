@@ -13,6 +13,29 @@
   CustomQuery="false"
   SelectAllAttributes="false"
   PageIterMode="Full">
+  <ViewAccessor
+    Name="OpportunityEOView1"
+    ViewObjectName="com.sfa.model.view.OpportunityEOView"
+    RowLevelBinds="true"/>
+  <ListBinding
+    Name="LOV_OpportunityId"
+    ListVOName="OpportunityEOView1"
+    ComboRowCountHint="10"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="OpportunityId"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="OpportunityId"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="OpportunityName"/>
+    </AttrArray>
+    <DisplayCriteria
+      Hint="showAndExecute"/>
+  </ListBinding>
   <EntityUsage
     Name="RevenueitemEO"
     Entity="com.sfa.model.entity.RevenueitemEO"/>
@@ -28,7 +51,15 @@
     PrecisionRule="true"
     EntityAttrName="OpportunityId"
     EntityUsage="RevenueitemEO"
-    AliasName="OPPORTUNITY_ID"/>
+    AliasName="OPPORTUNITY_ID"
+    LOVName="LOV_OpportunityId">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="combo_lov"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="ProductId"
     PrecisionRule="true"

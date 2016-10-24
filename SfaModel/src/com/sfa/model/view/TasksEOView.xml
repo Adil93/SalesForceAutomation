@@ -13,6 +13,29 @@
   CustomQuery="false"
   SelectAllAttributes="false"
   PageIterMode="Full">
+  <ViewAccessor
+    Name="ParentTypeView1"
+    ViewObjectName="com.sfa.model.view.ParentTypeView"
+    RowLevelBinds="true"/>
+  <ListBinding
+    Name="LOV_ParentType"
+    ListVOName="ParentTypeView1"
+    ComboRowCountHint="10"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="ParentType"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="type"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="type"/>
+    </AttrArray>
+    <DisplayCriteria
+      Hint="showAndExecute"/>
+  </ListBinding>
   <EntityUsage
     Name="TasksEO"
     Entity="com.sfa.model.entity.TasksEO"/>
@@ -52,7 +75,15 @@
     PrecisionRule="true"
     EntityAttrName="ParentType"
     EntityUsage="TasksEO"
-    AliasName="PARENT_TYPE"/>
+    AliasName="PARENT_TYPE"
+    LOVName="LOV_ParentType">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="combo_lov"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="PercentCompleted"
     PrecisionRule="true"
