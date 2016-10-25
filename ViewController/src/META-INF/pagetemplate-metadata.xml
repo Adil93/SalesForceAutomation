@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <pageTemplateDefs xmlns="http://xmlns.oracle.com/adf/faces/rich/pagetemplate">
+<<<<<<< HEAD
   <pagetemplate-jsp-ui-def>/WEB-INF/templates/defaultTemplate.jsf</pagetemplate-jsp-ui-def>
   <pagetemplate-jsp-ui-def>/sfaDefaultTemplate.jsf</pagetemplate-jsp-ui-def>
+=======
+>>>>>>> dcb23079bb007d29d5be2fe5376f8f8d1e271aa7
   <pagetemplate-jsp-ui-def>/login.jsf</pagetemplate-jsp-ui-def>
 </pageTemplateDefs>

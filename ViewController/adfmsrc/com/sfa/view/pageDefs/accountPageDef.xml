@@ -4,6 +4,18 @@
   <parameters/>
   <executables>
     <variableIterator id="variables"/>
+    <iterator Binds="CustomerAccountEOView1" RangeSize="25" DataControl="AppModuleDataControl"
+              id="CustomerAccountEOView1Iterator"/>
   </executables>
-  <bindings/>
+  <bindings>
+    <tree IterBinding="CustomerAccountEOView1Iterator" id="CustomerAccountEOView1">
+      <nodeDefinition DefName="com.sfa.model.view.CustomerAccountEOView" Name="CustomerAccountEOView10">
+        <AttrNames>
+          <Item Value="AccountName"/>
+          <Item Value="PrimaryContactId"/>
+          <Item Value="Phone"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+  </bindings>
 </pageDefinition>

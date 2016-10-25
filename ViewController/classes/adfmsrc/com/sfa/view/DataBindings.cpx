@@ -3,16 +3,8 @@
              SeparateXMLFiles="false" Package="com.sfa.view" ClientType="Generic">
   <pageMap>
     <page path="/login.jsf" usageId="com_sfa_view_loginPageDef"/>
-<<<<<<< HEAD
-    <page path="/sfaDefaultTemplate.jsf" usageId="com_sfa_view_sfaDefaultTemplatePageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="com_sfa_view_loginPageDef" path="com.sfa.view.pageDefs.loginPageDef"/>
-    <page id="com_sfa_view_sfaDefaultTemplatePageDef" path="com.sfa.view.pageDefs.sfaDefaultTemplatePageDef"/>
-=======
-  </pageMap>
-  <pageDefinitionUsages>
-    <page id="com_sfa_view_loginPageDef" path="com.sfa.view.pageDefs.loginPageDef"/>
->>>>>>> dcb23079bb007d29d5be2fe5376f8f8d1e271aa7
   </pageDefinitionUsages>
 </Application>
