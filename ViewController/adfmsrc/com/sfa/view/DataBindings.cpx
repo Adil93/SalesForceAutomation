@@ -18,6 +18,19 @@
                      SupportsSortCollection="true" Configuration="AppModuleLocal" syncMode="Immediate"
                      xmlns="http://xmlns.oracle.com/adfm/datacontrol"/>
   </dataControlUsages>
+
+    <page path="/account.jsf" usageId="com_sfa_view_accountPageDef"/>
+  
+  <pageDefinitionUsages>
+    <page id="com_sfa_view_accountPageDef" path="com.sfa.view.pageDefs.accountPageDef"/>
+  </pageDefinitionUsages>
+  <dataControlUsages>
+    <BC4JDataControl id="AppModuleDataControl" Package="com.sfa.model.entity"
+                     FactoryClass="oracle.adf.model.bc4j.DataControlFactoryImpl" SupportsTransactions="true"
+                     SupportsFindMode="true" SupportsRangesize="true" SupportsResetState="true"
+                     SupportsSortCollection="true" Configuration="AppModuleLocal" syncMode="Immediate"
+                     xmlns="http://xmlns.oracle.com/adfm/datacontrol"/>
+  </dataControlUsages>
 </pageMap>
   <pageDefinitionUsages>
     <page id="com_sfa_view_loginPageDef" path="com.sfa.view.pageDefs.loginPageDef"/>

@@ -11,37 +11,48 @@
           <af:panelAccordion discloseMany="true" id="pa1">
             <af:showDetailItem id="searchPanel" text="Search" icon="file:/D:/1477414140_search.png" disclosed="true">
               <f:facet name="toolbar"/>
+              <af:panelFormLayout id="pfl1">
+                <af:inputText value="#{bindings.AccountName.inputValue}" label="#{bindings.AccountName.hints.label}"
+                              required="#{bindings.AccountName.hints.mandatory}"
+                              columns="#{bindings.AccountName.hints.displayWidth}"
+                              maximumLength="#{bindings.AccountName.hints.precision}"
+                              shortDesc="#{bindings.AccountName.hints.tooltip}" id="it1">
+                  <f:validator binding="#{bindings.AccountName.validator}"/>
+                </af:inputText>
+              </af:panelFormLayout>
             </af:showDetailItem>
             <af:showDetailItem id="listPanel" text="Acconts" icon="file:/D:/1477414263_th-list.png" disclosed="true">
               <f:facet name="toolbar"/>
-              <af:listView value="#{bindings.CustomerAccountEOView11.collectionModel}" var="item"
-                           emptyText="#{bindings.CustomerAccountEOView11.viewable ? 'No data to display.' : 'Access Denied.'}"
-                           fetchSize="#{bindings.CustomerAccountEOView11.rangeSize}" id="lv1">
-                <af:listItem id="li1">
-                  <af:panelGroupLayout layout="horizontal" id="pgl1">
-                    <f:facet name="separator">
-                      <af:spacer width="10" id="s1"/>
-                    </f:facet>
-                    <af:panelLabelAndMessage label="Name" id="plam1">
-                      <af:outputText value="#{item.AccountName}"
-                                     shortDesc="#{bindings.CustomerAccountEOView11.hints.AccountName.tooltip}"
-                                     id="ot1"/>
-                    </af:panelLabelAndMessage>
-                    <af:panelLabelAndMessage label="Primary Account" id="plam2">
-                      <af:outputText value="#{item.PrimaryContactId}"
-                                     shortDesc="#{bindings.CustomerAccountEOView11.hints.PrimaryContactId.tooltip}"
-                                     id="ot2">
-                        <af:convertNumber groupingUsed="false"
-                                          pattern="#{bindings.CustomerAccountEOView11.hints.PrimaryContactId.format}"/>
-                      </af:outputText>
-                    </af:panelLabelAndMessage>
-                    <af:panelLabelAndMessage label="Phone" id="plam3">
-                      <af:outputText value="#{item.Phone}"
-                                     shortDesc="#{bindings.CustomerAccountEOView11.hints.Phone.tooltip}" id="ot3"/>
-                    </af:panelLabelAndMessage>
-                  </af:panelGroupLayout>
-                </af:listItem>
-              </af:listView>
+              <af:table value="#{bindings.CustomerAccountEOView12.collectionModel}" var="row"
+                        rows="#{bindings.CustomerAccountEOView12.rangeSize}"
+                        emptyText="#{bindings.CustomerAccountEOView12.viewable ? 'No data to display.' : 'Access Denied.'}"
+                        rowBandingInterval="0"
+                        selectedRowKeys="#{bindings.CustomerAccountEOView12.collectionModel.selectedRow}"
+                        selectionListener="#{bindings.CustomerAccountEOView12.collectionModel.makeCurrent}"
+                        rowSelection="single" fetchSize="#{bindings.CustomerAccountEOView12.rangeSize}" id="t1"
+                        width="100%">
+                <af:column headerText="Name" id="c2" width="211">
+                  <af:inputText value="#{row.bindings.accountName.inputValue}"
+                                label="#{bindings.CustomerAccountEOView12.hints.accountName.label}"
+                                required="#{bindings.CustomerAccountEOView12.hints.PrimaryContactId.mandatory}"
+                                columns="#{bindings.CustomerAccountEOView12.hints.PrimaryContactId.displayWidth}"
+                                maximumLength="#{bindings.CustomerAccountEOView12.hints.PrimaryContactId.precision}"
+                                shortDesc="#{bindings.CustomerAccountEOView12.hints.PrimaryContactId.tooltip}" id="it2"
+                                editable="onAccess">
+                    <f:validator binding="#{row.bindings.PrimaryContactId.validator}"/>
+                    <af:convertNumber groupingUsed="false"
+                                      pattern="#{bindings.CustomerAccountEOView12.hints.PrimaryContactId.format}"/>
+                  </af:inputText>
+                </af:column>
+                <af:column headerText="Phone" id="c3" width="55">
+                  <af:outputText value="#{row.Phone}"
+                                 shortDesc="#{bindings.CustomerAccountEOView12.hints.Phone.tooltip}" id="ot1"/>
+                </af:column>
+                <af:column headerText="Description" id="c4" width="108">
+                  <af:outputText value="#{row.Description}"
+                                 shortDesc="#{bindings.CustomerAccountEOView12.hints.Description.tooltip}" id="ot2"/>
+                </af:column>
+              </af:table>
             </af:showDetailItem>
             <af:showDetailItem id="childPanel" text="Components"/>
           </af:panelAccordion>
