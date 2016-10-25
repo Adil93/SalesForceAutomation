@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+  <af:document title="account.jsf" id="d1">
+    <af:messages id="m1"/>
+    <af:form id="f1">
+      <af:pageTemplate viewId="/WEB-INF/templates/defaultTemplate.jsf" id="pt1">
+        <f:facet name="Heading"/>
+        <f:facet name="Footer"/>
+        <f:facet name="Main Content">
+          <af:panelAccordion discloseMany="true" id="pa1">
+            <af:showDetailItem id="searchPanel" text="Search" icon="file:/D:/1477414140_search.png" disclosed="true">
+              <f:facet name="toolbar"/>
+            </af:showDetailItem>
+            <af:showDetailItem id="listPanel" text="Acconts" icon="file:/D:/1477414263_th-list.png" disclosed="true">
+              <f:facet name="toolbar"/>
+              <af:listView value="#{bindings.CustomerAccountEOView1.collectionModel}" var="item"
+                           emptyText="#{bindings.CustomerAccountEOView1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                           fetchSize="#{bindings.CustomerAccountEOView1.rangeSize}" id="lv1">
+                <af:listItem id="li1">
+                  <af:panelGridLayout id="pgl1">
+                    <af:gridRow marginTop="5px" height="auto" id="gr1">
+                      <af:gridCell marginStart="5px" width="50%" id="gc1"/>
+                      <af:gridCell marginStart="5px" width="25%" id="gc2"/>
+                      <af:gridCell marginStart="5px" width="25%" marginEnd="5px" id="gc3"/>
+                    </af:gridRow>
+                    <af:gridRow marginTop="5px" height="auto" id="gr2">
+                      <af:gridCell marginStart="5px" width="50%" id="gc4"/>
+                      <af:gridCell marginStart="5px" width="25%" id="gc5"/>
+                      <af:gridCell marginStart="5px" width="25%" marginEnd="5px" id="gc6"/>
+                    </af:gridRow>
+                    <af:gridRow marginTop="5px" height="auto" id="gr3">
+                      <af:gridCell marginStart="5px" width="50%" id="gc7"/>
+                      <af:gridCell marginStart="5px" width="25%" id="gc8"/>
+                      <af:gridCell marginStart="5px" width="25%" marginEnd="5px" id="gc9"/>
+                    </af:gridRow>
+                    <af:gridRow marginTop="5px" height="auto" id="gr4">
+                      <af:gridCell marginStart="5px" width="50%" id="gc10"/>
+                      <af:gridCell marginStart="5px" width="25%" id="gc11"/>
+                      <af:gridCell marginStart="5px" width="25%" marginEnd="5px" id="gc12"/>
+                    </af:gridRow>
+                    <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr5">
+                      <af:gridCell marginStart="5px" width="50%" id="gc13"/>
+                      <af:gridCell marginStart="5px" width="25%" id="gc14"/>
+                      <af:gridCell marginStart="5px" width="25%" marginEnd="5px" id="gc15"/>
+                    </af:gridRow>
+                  </af:panelGridLayout>
+                </af:listItem>
+              </af:listView>
+            </af:showDetailItem>
+            <af:showDetailItem id="childPanel" text="Components"/>
+          </af:panelAccordion>
+        </f:facet>
+        <f:facet name="Left Menus"/>
+      </af:pageTemplate>
+    </af:form>
+  </af:document>
+</f:view>

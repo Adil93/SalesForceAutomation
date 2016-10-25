@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Application xmlns="http://xmlns.oracle.com/adfm/application" version="12.2.1.20.47" id="DataBindings"
+             SeparateXMLFiles="false" Package="com.sfa.view" ClientType="Generic">
+  <pageMap>
+    <page path="/login.jsf" usageId="com_sfa_view_loginPageDef"/>
+    <page path="/sfaDefaultTemplate.jsf" usageId="com_sfa_view_sfaDefaultTemplatePageDef"/>
+  </pageMap>
+  <pageDefinitionUsages>
+    <page id="com_sfa_view_loginPageDef" path="com.sfa.view.pageDefs.loginPageDef"/>
+    <page id="com_sfa_view_sfaDefaultTemplatePageDef" path="com.sfa.view.pageDefs.sfaDefaultTemplatePageDef"/>
+  </pageDefinitionUsages>
+</Application>

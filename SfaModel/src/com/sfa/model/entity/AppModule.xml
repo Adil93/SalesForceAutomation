@@ -11,9 +11,6 @@
     Name="AddressEOView1"
     ViewObjectName="com.sfa.model.view.AddressEOView"/>
   <ViewUsage
-    Name="AppointmentEOView1"
-    ViewObjectName="com.sfa.model.view.AppointmentEOView"/>
-  <ViewUsage
     Name="AppointmentInviteeRelationEOView1"
     ViewObjectName="com.sfa.model.view.AppointmentInviteeRelationEOView"/>
   <ViewUsage
@@ -56,9 +53,6 @@
     Name="AddressView1"
     ViewObjectName="com.sfa.model.view.AddressView"/>
   <ViewUsage
-    Name="AppointmentView1"
-    ViewObjectName="com.sfa.model.view.AppointmentView"/>
-  <ViewUsage
     Name="AppointmentInviteeRelationView1"
     ViewObjectName="com.sfa.model.view.AppointmentInviteeRelationView"/>
   <ViewUsage
@@ -97,9 +91,6 @@
   <ViewUsage
     Name="UsersView1"
     ViewObjectName="com.sfa.model.view.UsersView"/>
-  <ViewUsage
-    Name="AppointmentInviteeRelationEOView2"
-    ViewObjectName="com.sfa.model.view.AppointmentInviteeRelationEOView"/>
   <ViewUsage
     Name="CustomerAccountEOView2"
     ViewObjectName="com.sfa.model.view.CustomerAccountEOView"/>
@@ -209,9 +200,6 @@
     Name="CustomerContactView2"
     ViewObjectName="com.sfa.model.view.CustomerContactView"/>
   <ViewUsage
-    Name="AppointmentInviteeRelationView2"
-    ViewObjectName="com.sfa.model.view.AppointmentInviteeRelationView"/>
-  <ViewUsage
     Name="CustomerAccountView3"
     ViewObjectName="com.sfa.model.view.CustomerAccountView"/>
   <ViewUsage
@@ -307,12 +295,12 @@
   <ViewUsage
     Name="UsersView5"
     ViewObjectName="com.sfa.model.view.UsersView"/>
-  <ViewLinkUsage
-    Name="SysC007095Link1"
-    ViewLinkObjectName="com.sfa.model.view.SysC007095Link"
-    SrcViewUsageName="com.sfa.model.entity.AppModule.AppointmentEOView1"
-    DstViewUsageName="com.sfa.model.entity.AppModule.AppointmentInviteeRelationEOView2"
-    Reversed="false"/>
+  <ViewUsage
+    Name="AppointmentEOView1"
+    ViewObjectName="com.sfa.model.view.AppointmentEOView"/>
+  <ViewUsage
+    Name="AppointmentView1"
+    ViewObjectName="com.sfa.model.view.AppointmentView"/>
   <ViewLinkUsage
     Name="SysC007080Link1"
     ViewLinkObjectName="com.sfa.model.view.SysC007080Link"
@@ -528,12 +516,6 @@
     ViewLinkObjectName="com.sfa.model.view.SysC007088Link1"
     SrcViewUsageName="com.sfa.model.entity.AppModule.AddressView1"
     DstViewUsageName="com.sfa.model.entity.AppModule.CustomerContactView2"
-    Reversed="false"/>
-  <ViewLinkUsage
-    Name="SysC007095Link1_1"
-    ViewLinkObjectName="com.sfa.model.view.SysC007095Link1"
-    SrcViewUsageName="com.sfa.model.entity.AppModule.AppointmentView1"
-    DstViewUsageName="com.sfa.model.entity.AppModule.AppointmentInviteeRelationView2"
     Reversed="false"/>
   <ViewLinkUsage
     Name="SysC007080Link1_1"

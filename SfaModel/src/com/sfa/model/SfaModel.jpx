@@ -10,6 +10,7 @@
   <DesignTime>
     <Attr Name="_DTExpressionTypeChecking" Value="true"/>
     <Attr Name="_jprName" Value="../../../../SfaModel.jpr"/>
+    <Attr Name="_appModuleNames0" Value="com.sfa.model.entity.AppModule"/>
   </DesignTime>
   <Containee
     Name="entity"
