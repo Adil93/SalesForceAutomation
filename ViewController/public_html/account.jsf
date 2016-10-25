@@ -14,37 +14,32 @@
             </af:showDetailItem>
             <af:showDetailItem id="listPanel" text="Acconts" icon="file:/D:/1477414263_th-list.png" disclosed="true">
               <f:facet name="toolbar"/>
-              <af:listView value="#{bindings.CustomerAccountEOView1.collectionModel}" var="item"
-                           emptyText="#{bindings.CustomerAccountEOView1.viewable ? 'No data to display.' : 'Access Denied.'}"
-                           fetchSize="#{bindings.CustomerAccountEOView1.rangeSize}" id="lv1">
+              <af:listView value="#{bindings.CustomerAccountEOView11.collectionModel}" var="item"
+                           emptyText="#{bindings.CustomerAccountEOView11.viewable ? 'No data to display.' : 'Access Denied.'}"
+                           fetchSize="#{bindings.CustomerAccountEOView11.rangeSize}" id="lv1">
                 <af:listItem id="li1">
-                  <af:panelGridLayout id="pgl1">
-                    <af:gridRow marginTop="5px" height="auto" id="gr1">
-                      <af:gridCell marginStart="5px" width="50%" id="gc1"/>
-                      <af:gridCell marginStart="5px" width="25%" id="gc2"/>
-                      <af:gridCell marginStart="5px" width="25%" marginEnd="5px" id="gc3"/>
-                    </af:gridRow>
-                    <af:gridRow marginTop="5px" height="auto" id="gr2">
-                      <af:gridCell marginStart="5px" width="50%" id="gc4"/>
-                      <af:gridCell marginStart="5px" width="25%" id="gc5"/>
-                      <af:gridCell marginStart="5px" width="25%" marginEnd="5px" id="gc6"/>
-                    </af:gridRow>
-                    <af:gridRow marginTop="5px" height="auto" id="gr3">
-                      <af:gridCell marginStart="5px" width="50%" id="gc7"/>
-                      <af:gridCell marginStart="5px" width="25%" id="gc8"/>
-                      <af:gridCell marginStart="5px" width="25%" marginEnd="5px" id="gc9"/>
-                    </af:gridRow>
-                    <af:gridRow marginTop="5px" height="auto" id="gr4">
-                      <af:gridCell marginStart="5px" width="50%" id="gc10"/>
-                      <af:gridCell marginStart="5px" width="25%" id="gc11"/>
-                      <af:gridCell marginStart="5px" width="25%" marginEnd="5px" id="gc12"/>
-                    </af:gridRow>
-                    <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr5">
-                      <af:gridCell marginStart="5px" width="50%" id="gc13"/>
-                      <af:gridCell marginStart="5px" width="25%" id="gc14"/>
-                      <af:gridCell marginStart="5px" width="25%" marginEnd="5px" id="gc15"/>
-                    </af:gridRow>
-                  </af:panelGridLayout>
+                  <af:panelGroupLayout layout="horizontal" id="pgl1">
+                    <f:facet name="separator">
+                      <af:spacer width="10" id="s1"/>
+                    </f:facet>
+                    <af:panelLabelAndMessage label="Name" id="plam1">
+                      <af:outputText value="#{item.AccountName}"
+                                     shortDesc="#{bindings.CustomerAccountEOView11.hints.AccountName.tooltip}"
+                                     id="ot1"/>
+                    </af:panelLabelAndMessage>
+                    <af:panelLabelAndMessage label="Primary Account" id="plam2">
+                      <af:outputText value="#{item.PrimaryContactId}"
+                                     shortDesc="#{bindings.CustomerAccountEOView11.hints.PrimaryContactId.tooltip}"
+                                     id="ot2">
+                        <af:convertNumber groupingUsed="false"
+                                          pattern="#{bindings.CustomerAccountEOView11.hints.PrimaryContactId.format}"/>
+                      </af:outputText>
+                    </af:panelLabelAndMessage>
+                    <af:panelLabelAndMessage label="Phone" id="plam3">
+                      <af:outputText value="#{item.Phone}"
+                                     shortDesc="#{bindings.CustomerAccountEOView11.hints.Phone.tooltip}" id="ot3"/>
+                    </af:panelLabelAndMessage>
+                  </af:panelGroupLayout>
                 </af:listItem>
               </af:listView>
             </af:showDetailItem>
