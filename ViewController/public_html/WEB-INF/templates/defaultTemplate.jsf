@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?xml version='1.0' encoding='UTF-8'?>
 <af:pageTemplateDef xmlns:af="http://xmlns.oracle.com/adf/faces/rich" var="attrs" definition="private"
                     xmlns:afc="http://xmlns.oracle.com/adf/faces/rich/component" xmlns:f="http://java.sun.com/jsf/core">

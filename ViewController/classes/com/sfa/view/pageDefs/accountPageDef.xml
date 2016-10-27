@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.20.47" id="accountPageDef"
+                Package="com.sfa.view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="CustomerAccountEOView1" RangeSize="25" DataControl="AppModuleDataControl"
+              id="CustomerAccountEOView1Iterator"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="CustomerAccountEOView1Iterator" id="CustomerAccountEOView1">
+      <nodeDefinition DefName="com.sfa.model.view.CustomerAccountEOView" Name="CustomerAccountEOView10">
+        <AttrNames>
+          <Item Value="AccountName"/>
+          <Item Value="PrimaryContactId"/>
+          <Item Value="Phone"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <tree IterBinding="CustomerAccountEOView1Iterator" id="CustomerAccountEOView11">
+      <nodeDefinition DefName="com.sfa.model.view.CustomerAccountEOView" Name="CustomerAccountEOView110">
+        <AttrNames>
+          <Item Value="AccountName"/>
+          <Item Value="PrimaryContactId"/>
+          <Item Value="Phone"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <tree IterBinding="CustomerAccountEOView1Iterator" id="CustomerAccountEOView12">
+      <nodeDefinition DefName="com.sfa.model.view.CustomerAccountEOView" Name="CustomerAccountEOView120">
+        <AttrNames>
+          <Item Value="Phone"/>
+          <Item Value="Description"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <attributeValues IterBinding="CustomerAccountEOView1Iterator" id="AccountName">
+      <AttrNames>
+        <Item Value="AccountName"/>
+      </AttrNames>
+    </attributeValues>
+  </bindings>
+</pageDefinition>

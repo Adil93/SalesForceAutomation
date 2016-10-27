@@ -2,9 +2,28 @@
 <Application xmlns="http://xmlns.oracle.com/adfm/application" version="12.2.1.20.47" id="DataBindings"
              SeparateXMLFiles="false" Package="com.sfa.view" ClientType="Generic">
   <pageMap>
-    <page path="/login.jsf" usageId="com_sfa_view_loginPageDef"/>
-  </pageMap>
+    
+
+    
+  
+    <page path="/account.jsf" usageId="com_sfa_view_accountPageDef"/>
+    <page path="/Contacts.jsf" usageId="com_sfa_view_ContactsPageDef"/>
+    <page path="/WEB-INF/templates/defaultTemplate.jsf" usageId="templates_defaultTemplatesPageDef"/>
+      
+</pageMap>
+  
   <pageDefinitionUsages>
-    <page id="com_sfa_view_loginPageDef" path="com.sfa.view.pageDefs.loginPageDef"/>
+    <page id="com_sfa_view_accountPageDef" path="com.sfa.view.pageDefs.accountPageDef"/>
+    <page id="com_sfa_view_ContactsPageDef" path="com.sfa.view.pageDefs.ContactsPageDef"/>
+    <page id="templates_defaultTemplatesPageDef" path="templates.defaultTemplatePageDef"/>
   </pageDefinitionUsages>
+  <dataControlUsages>
+    <BC4JDataControl id="AppModuleDataControl" Package="com.sfa.model.entity"
+                     FactoryClass="oracle.adf.model.bc4j.DataControlFactoryImpl" SupportsTransactions="true"
+                     SupportsFindMode="true" SupportsRangesize="true" SupportsResetState="true"
+                     SupportsSortCollection="true" Configuration="AppModuleLocal" syncMode="Immediate"
+                     xmlns="http://xmlns.oracle.com/adfm/datacontrol"/>
+  </dataControlUsages>
+   
+
 </Application>
