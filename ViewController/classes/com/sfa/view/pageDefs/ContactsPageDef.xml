@@ -4,6 +4,7 @@
   <parameters/>
   <executables>
     <variableIterator id="variables"/>
+    <page path="templates.defaultTemplatePageDef" id="ptb1" Refresh="ifNeeded"/>
   </executables>
   <bindings/>
 </pageDefinition>

@@ -1,6 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <af:pageTemplateDef xmlns:af="http://xmlns.oracle.com/adf/faces/rich" var="attrs" definition="private"
-                    xmlns:afc="http://xmlns.oracle.com/adf/faces/rich/component" xmlns:f="http://java.sun.com/jsf/core">
+                    xmlns:afc="http://xmlns.oracle.com/adf/faces/rich/component" xmlns:f="http://java.sun.com/jsf/core"
+                    xmlns:h="http://java.sun.com/jsf/html">
     <af:xmlContent>
         <afc:component>
             <afc:description/>
@@ -35,8 +36,12 @@
                 <af:panelHeader text="Sales Force" id="pt_ph1" icon="#{resource['images:oracle_logo.png']}"
                                 inlineStyle="color:Blue; font-size:20px; background-color:#B0F5CD;">
                     <f:facet name="context"/>
-                    <f:facet name="toolbar"/>
-                    <f:facet name="menuBar"/>
+                    <f:facet name="toolbar">
+                        <af:button text="Preferences" id="pt_b2"/>
+                    </f:facet>
+                    <f:facet name="menuBar">
+                        <af:button text="Logout" id="pt_b1"/>
+                    </f:facet>
                     <f:facet name="legend"/>
                     <f:facet name="info"/>
                 </af:panelHeader>
@@ -47,13 +52,25 @@
             <af:gridCell width="100%" halign="stretch" valign="stretch" id="pt_gc2">
                 <af:decorativeBox theme="dark" id="pt_db2">
                     <f:facet name="center">
-                        <af:decorativeBox theme="medium" id="pt_db1">
+                        <af:decorativeBox theme="medium" id="pt_db1"
+                                          inlineStyle='background-image:url("background.jpg");'>
                             <f:facet name="center">
                                 <!-- Content -->
-                                <af:panelSplitter id="pt_ps1">
+                                <af:panelSplitter id="pt_ps1" splitterPosition="202">
                                     <f:facet name="first">
-                                        <af:facetRef facetName="Left Menus"/>
+                                         
+                                      <!-- <af:facetRef facetName="Left Menus"/> -->
+                                        <af:panelBox text="Menus" id="pt_pb1">
+                                            <f:facet name="toolbar"/>
+                                            <h:commandLink value="HOME" id="pt_cl1" style="color:#468C0A;"/>
+                                            <h:outputText value="&#160;" id="pt_ot1"/>
+                                            <h:commandLink value="ACCOUNTS" id="pt_cl2" style="color:#468C0A;"/>
+                                            <h:outputText value="&#160;" id="pt_ot2"/>
+                                            <h:commandLink value="CONTACTS" id="pt_cl3" style="color:#468C0A;"/>
+                                            <h:outputText value="&#160;" id="pt_ot3"/>
+                                        </af:panelBox>
                                     </f:facet>
+                                    
                                     <f:facet name="second">
                                         <af:facetRef facetName="Main Content"/>
                                     </f:facet>

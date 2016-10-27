@@ -3,21 +3,11 @@
 <f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
   <af:document title="Contacts.jsf" id="d1">
     <af:form id="f1">
-      <af:pageTemplate viewId="/WEB-INF/templates/defaultTemplate.jsf" id="pt1">
+      <af:pageTemplate viewId="/WEB-INF/templates/defaultTemplate.jsf" id="pt1" value="#{bindings.ptb1}">
         <f:facet name="Heading"/>
         <f:facet name="Footer"/>
         <f:facet name="Main Content">
-          <af:panelDashboard id="pd1" rowHeight="300px">
-            <af:panelBox text="PanelBox1" id="pb1">
-              <f:facet name="toolbar"/>
-            </af:panelBox>
-            <af:panelBox text="PanelBox2" id="pb2">
-              <f:facet name="toolbar"/>
-            </af:panelBox>
-            <af:panelBox text="PanelBox3" id="pb3">
-              <f:facet name="toolbar"/>
-            </af:panelBox>
-          </af:panelDashboard>
+          <af:panelDashboard id="pd1" rowHeight="300px"/>
         </f:facet>
         <f:facet name="Left Menus"/>
       </af:pageTemplate>
