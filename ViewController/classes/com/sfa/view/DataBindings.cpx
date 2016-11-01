@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <Application xmlns="http://xmlns.oracle.com/adfm/application" version="12.2.1.20.47" id="DataBindings"
              SeparateXMLFiles="false" Package="com.sfa.view" ClientType="Generic">
+  <definitionFactories>
+    <factory nameSpace="http://xmlns.oracle.com/adf/controller/binding"
+             className="oracle.adf.controller.internal.binding.TaskFlowBindingDefFactoryImpl"/>
+    <dtfactory className="oracle.adf.controller.internal.dtrt.binding.BindingDTObjectFactory"/>
+  </definitionFactories>
   <pageMap>
     
 
@@ -9,13 +14,15 @@
     <page path="/account.jsf" usageId="com_sfa_view_accountPageDef"/>
     <page path="/Contacts.jsf" usageId="com_sfa_view_ContactsPageDef"/>
     <page path="/WEB-INF/templates/defaultTemplate.jsf" usageId="templates_defaultTemplatesPageDef"/>
-      
-</pageMap>
+    <page path="/fragments/ContFragments.jsff" usageId="com_sfa_view_ContFragmentsPageDef"/>
+    <page path="/fragments/contFragments.jsff" usageId="com_sfa_view_ContFragmentsPageDef"/>
+  </pageMap>
   
   <pageDefinitionUsages>
     <page id="com_sfa_view_accountPageDef" path="com.sfa.view.pageDefs.accountPageDef"/>
     <page id="com_sfa_view_ContactsPageDef" path="com.sfa.view.pageDefs.ContactsPageDef"/>
     <page id="templates_defaultTemplatesPageDef" path="templates.defaultTemplatePageDef"/>
+    <page id="com_sfa_view_ContFragmentsPageDef" path="fragments.ContFragmentsPageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleDataControl" Package="com.sfa.model.entity"

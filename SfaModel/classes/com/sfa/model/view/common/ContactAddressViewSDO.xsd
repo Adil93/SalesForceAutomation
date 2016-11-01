@@ -1,0 +1,42 @@
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sdoXML="commonj.sdo/xml" xmlns:sdoJava="commonj.sdo/java"
+     xmlns:ns0="http://xmlns.oracle.com/adf/svc/types/" targetNamespace="/com/sfa/model/view/common/"
+     xmlns="/com/sfa/model/view/common/" elementFormDefault="qualified" sdoJava:package="com.sfa.model.view.common">
+    <xsd:annotation>
+        <xsd:documentation>
+            <name>Contact Address View</name>
+        </xsd:documentation>
+    </xsd:annotation>
+    <xsd:import schemaLocation="classpath:/META-INF/wsdl/BC4JService.xsd" namespace="http://xmlns.oracle.com/adf/svc/types/"/>
+    <xsd:import schemaLocation="classpath:/xml/sdoXML.xsd" namespace="commonj.sdo/xml"/>
+    <xsd:import schemaLocation="classpath:/xml/sdoJava.xsd" namespace="commonj.sdo/java"/>
+    <xsd:complexType name="ContactAddressViewSDO">
+        <xsd:annotation>
+            <xsd:appinfo source="http://xmlns.oracle.com/adf/svc/metadata/">
+                <key xmlns="http://xmlns.oracle.com/adf/svc/metadata/">
+                    <attribute>ContactId</attribute>
+                </key>
+            </xsd:appinfo>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element name="AccountId" type="xsd:integer" minOccurs="0" nillable="true"/>
+            <xsd:element name="AddressId1" type="xsd:int" minOccurs="0" nillable="true"/>
+            <xsd:element name="ContactId" type="xsd:int" minOccurs="0" sdoXML:dataType="sdoJava:IntObject"/>
+            <xsd:element name="CreatedBy" type="xsd:integer" minOccurs="0" nillable="true"/>
+            <xsd:element name="CreationDate" type="ns0:dateTime-Timestamp" minOccurs="0" nillable="true"/>
+            <xsd:element name="DepartmentId" type="xsd:integer" minOccurs="0" nillable="true"/>
+            <xsd:element name="Description" type="xsd:string" minOccurs="0" nillable="true"/>
+            <xsd:element name="Email" type="xsd:string" minOccurs="0" nillable="true"/>
+            <xsd:element name="FirstName" type="xsd:string" minOccurs="0"/>
+            <xsd:element name="InfluenceLevel" type="xsd:int" minOccurs="0" nillable="true"/>
+            <xsd:element name="IsPrimaryContact" type="xsd:string" minOccurs="0" nillable="true"/>
+            <xsd:element name="LastName" type="xsd:string" minOccurs="0"/>
+            <xsd:element name="MiddleName" type="xsd:string" minOccurs="0" nillable="true"/>
+            <xsd:element name="MobilePhone" type="xsd:string" minOccurs="0" nillable="true"/>
+            <xsd:element name="ModifiedBy" type="xsd:integer" minOccurs="0" nillable="true"/>
+            <xsd:element name="ModifiedDate" type="ns0:dateTime-Timestamp" minOccurs="0" nillable="true"/>
+            <xsd:element name="Title" type="xsd:string" minOccurs="0" nillable="true"/>
+            <xsd:element name="WorkPhone" type="xsd:string" minOccurs="0" nillable="true"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:element name="contactAddressViewSDO" type="ContactAddressViewSDO"/>
+</xsd:schema>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.20.47" id="ContFragmentsPageDef"
+                Package="fragments">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="CustomerContactView1" RangeSize="25" DataControl="AppModuleDataControl"
+              id="CustomerContactView1Iterator"/>
+    <searchRegion Binds="CustomerContactView1Iterator" Criteria=""
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="CustomerContactView11Query"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="CustomerContactView1Iterator" id="CustomerContactView1">
+      <nodeDefinition DefName="com.sfa.model.view.CustomerContactView" Name="CustomerContactView10">
+        <AttrNames>
+          <Item Value="ContactId"/>
+          <Item Value="FirstName"/>
+          <Item Value="MiddleName"/>
+          <Item Value="Title"/>
+          <Item Value="LastName"/>
+          <Item Value="AddressId"/>
+          <Item Value="AccountId"/>
+          <Item Value="DepartmentId"/>
+          <Item Value="WorkPhone"/>
+          <Item Value="MobilePhone"/>
+          <Item Value="Email"/>
+          <Item Value="InfluenceLevel"/>
+          <Item Value="IsPrimaryContact"/>
+          <Item Value="Description"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <action IterBinding="CustomerContactView1Iterator" id="First" RequiresUpdateModel="true" Action="first"/>
+    <action IterBinding="CustomerContactView1Iterator" id="Previous" RequiresUpdateModel="true" Action="previous"/>
+    <action IterBinding="CustomerContactView1Iterator" id="Next" RequiresUpdateModel="true" Action="next"/>
+    <action IterBinding="CustomerContactView1Iterator" id="Last" RequiresUpdateModel="true" Action="last"/>
+    <attributeValues IterBinding="CustomerContactView1Iterator" id="ContactId">
+      <AttrNames>
+        <Item Value="ContactId"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CustomerContactView1Iterator" id="FirstName">
+      <AttrNames>
+        <Item Value="FirstName"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CustomerContactView1Iterator" id="Title">
+      <AttrNames>
+        <Item Value="Title"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CustomerContactView1Iterator" id="LastName">
+      <AttrNames>
+        <Item Value="LastName"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CustomerContactView1Iterator" id="AccountId">
+      <AttrNames>
+        <Item Value="AccountId"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CustomerContactView1Iterator" id="DepartmentId">
+      <AttrNames>
+        <Item Value="DepartmentId"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CustomerContactView1Iterator" id="WorkPhone">
+      <AttrNames>
+        <Item Value="WorkPhone"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CustomerContactView1Iterator" id="MobilePhone">
+      <AttrNames>
+        <Item Value="MobilePhone"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CustomerContactView1Iterator" id="Email">
+      <AttrNames>
+        <Item Value="Email"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CustomerContactView1Iterator" id="InfluenceLevel">
+      <AttrNames>
+        <Item Value="InfluenceLevel"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CustomerContactView1Iterator" id="IsPrimaryContact">
+      <AttrNames>
+        <Item Value="IsPrimaryContact"/>
+      </AttrNames>
+    </attributeValues>
+    <tree IterBinding="CustomerContactView1Iterator" id="CustomerContactView11">
+      <nodeDefinition DefName="com.sfa.model.view.CustomerContactView" Name="CustomerContactView110">
+        <AttrNames>
+          <Item Value="ContactId"/>
+          <Item Value="FirstName"/>
+          <Item Value="MiddleName"/>
+          <Item Value="Title"/>
+          <Item Value="LastName"/>
+          <Item Value="AddressId"/>
+          <Item Value="AccountId"/>
+          <Item Value="DepartmentId"/>
+          <Item Value="WorkPhone"/>
+          <Item Value="MobilePhone"/>
+          <Item Value="Email"/>
+          <Item Value="InfluenceLevel"/>
+          <Item Value="IsPrimaryContact"/>
+          <Item Value="Description"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+  </bindings>
+</pageDefinition>

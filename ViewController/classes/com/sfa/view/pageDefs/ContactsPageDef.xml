@@ -5,6 +5,8 @@
   <executables>
     <variableIterator id="variables"/>
     <page path="templates.defaultTemplatePageDef" id="ptb1" Refresh="ifNeeded"/>
+    <taskFlow id="ContactEditFlow1" taskFlowId="/WEB-INF/ContactEditFlow.xml#ContactEditFlow" activation="deferred"
+              xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
   </executables>
   <bindings/>
 </pageDefinition>
