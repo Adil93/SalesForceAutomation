@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <af:document title="sfaHome.jsf" id="d1">
+        <af:form id="f1">
+            <af:pageTemplate viewId="/sfaTemplate.jsf" value="#{bindings.ptb1}" id="pt1">
+                <f:facet name="center">
+                    <af:panelSplitter id="ps1" splitterPosition="204" inlineStyle="width:869px;">
+                        <f:facet name="first">
+                            <af:panelAccordion discloseMany="true" id="pa1">
+                                <af:showDetailItem id="pane1" text="MENU"/>
+                            </af:panelAccordion>
+                        </f:facet>
+                        <f:facet name="second">
+                            <af:panelSplitter id="ps2" orientation="vertical">
+                                <f:facet name="first">
+                                    <af:panelCollection id="pc1">
+                                        <f:facet name="menus"/>
+                                        <f:facet name="toolbar"/>
+                                        <f:facet name="statusbar"/>
+                                    </af:panelCollection>
+                                </f:facet>
+                                <f:facet name="second">
+                                    <af:panelTabbed position="above" id="pt2">
+                                        <af:showDetailItem id="tab1" text="Result Contacts"/>
+                                        <af:showDetailItem text="Influence Level" id="sdi1"/>
+                                    </af:panelTabbed>
+                                </f:facet>
+                            </af:panelSplitter>
+                        </f:facet>
+                    </af:panelSplitter>
+                </f:facet>
+                <f:attribute name="title" value="Sales Force Automation"/>
+            </af:pageTemplate>
+        </af:form>
+    </af:document>
+</f:view>

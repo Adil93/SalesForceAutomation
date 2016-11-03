@@ -16,6 +16,8 @@
     <page path="/Home.jsf" usageId="com_sfa_view_HomePageDef"/>
     <page path="/templates/defaultTemplate.jsf" usageId="templates_defaultTemplatesPageDef"/>
     <page path="/fragments/contFragments.jsff" usageId="fragments_ContFragmentsPageDef"/>
+    <page path="/sfaTemplate.jsf" usageId="com_sfa_view_sfaTemplatePageDef"/>
+    <page path="/sfaHome.jsf" usageId="com_sfa_view_sfaHomePageDef"/>
   </pageMap>
   
   <pageDefinitionUsages>
@@ -24,6 +26,8 @@
     <page id="templates_defaultTemplatesPageDef" path="templates.defaultTemplatePageDef"/>
     <page id="fragments_ContFragmentsPageDef" path="fragments.ContFragmentsPageDef"/>
     <page id="com_sfa_view_HomePageDef" path="com.sfa.view.pageDefs.HomePageDef"/>
+    <page id="com_sfa_view_sfaTemplatePageDef" path="com.sfa.view.pageDefs.sfaTemplatePageDef"/>
+    <page id="com_sfa_view_sfaHomePageDef" path="com.sfa.view.pageDefs.sfaHomePageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleDataControl" Package="com.sfa.model.entity"
