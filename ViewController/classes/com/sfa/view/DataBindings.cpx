@@ -13,16 +13,17 @@
   
     <page path="/account.jsf" usageId="com_sfa_view_accountPageDef"/>
     <page path="/Contacts.jsf" usageId="com_sfa_view_ContactsPageDef"/>
-    <page path="/WEB-INF/templates/defaultTemplate.jsf" usageId="templates_defaultTemplatesPageDef"/>
-    <page path="/fragments/ContFragments.jsff" usageId="com_sfa_view_ContFragmentsPageDef"/>
-    <page path="/fragments/contFragments.jsff" usageId="com_sfa_view_ContFragmentsPageDef"/>
+    <page path="/Home.jsf" usageId="com_sfa_view_HomePageDef"/>
+    <page path="/templates/defaultTemplate.jsf" usageId="templates_defaultTemplatesPageDef"/>
+    <page path="/fragments/contFragments.jsff" usageId="fragments_ContFragmentsPageDef"/>
   </pageMap>
   
   <pageDefinitionUsages>
     <page id="com_sfa_view_accountPageDef" path="com.sfa.view.pageDefs.accountPageDef"/>
     <page id="com_sfa_view_ContactsPageDef" path="com.sfa.view.pageDefs.ContactsPageDef"/>
     <page id="templates_defaultTemplatesPageDef" path="templates.defaultTemplatePageDef"/>
-    <page id="com_sfa_view_ContFragmentsPageDef" path="fragments.ContFragmentsPageDef"/>
+    <page id="fragments_ContFragmentsPageDef" path="fragments.ContFragmentsPageDef"/>
+    <page id="com_sfa_view_HomePageDef" path="com.sfa.view.pageDefs.HomePageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleDataControl" Package="com.sfa.model.entity"

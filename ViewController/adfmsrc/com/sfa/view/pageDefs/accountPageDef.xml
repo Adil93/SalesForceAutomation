@@ -26,18 +26,5 @@
         </AttrNames>
       </nodeDefinition>
     </tree>
-    <tree IterBinding="CustomerAccountEOView1Iterator" id="CustomerAccountEOView12">
-      <nodeDefinition DefName="com.sfa.model.view.CustomerAccountEOView" Name="CustomerAccountEOView120">
-        <AttrNames>
-          <Item Value="Phone"/>
-          <Item Value="Description"/>
-        </AttrNames>
-      </nodeDefinition>
-    </tree>
-    <attributeValues IterBinding="CustomerAccountEOView1Iterator" id="AccountName">
-      <AttrNames>
-        <Item Value="AccountName"/>
-      </AttrNames>
-    </attributeValues>
   </bindings>
 </pageDefinition>

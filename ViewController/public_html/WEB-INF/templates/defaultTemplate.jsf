@@ -56,25 +56,6 @@
                                           inlineStyle='background-image:url("background.jpg");'>
                             <f:facet name="center">
                                 <!-- Content -->
-                                <af:panelSplitter id="pt_ps1" splitterPosition="202">
-                                    <f:facet name="first">
-                                         
-                                      <!-- <af:facetRef facetName="Left Menus"/> -->
-                                        <af:panelBox text="Menus" id="pt_pb1">
-                                            <f:facet name="toolbar"/>
-                                            <h:commandLink value="HOME" id="pt_cl1" style="color:#468C0A;"/>
-                                            <h:outputText value="&#160;" id="pt_ot1"/>
-                                            <h:commandLink value="ACCOUNTS" id="pt_cl2" style="color:#468C0A;"/>
-                                            <h:outputText value="&#160;" id="pt_ot2"/>
-                                            <h:commandLink value="CONTACTS" id="pt_cl3" style="color:#468C0A;"/>
-                                            <h:outputText value="&#160;" id="pt_ot3"/>
-                                        </af:panelBox>
-                                    </f:facet>
-                                    
-                                    <f:facet name="second">
-                                        <af:facetRef facetName="Main Content"/>
-                                    </f:facet>
-                                </af:panelSplitter>
                             </f:facet>
                         </af:decorativeBox>
                     </f:facet>

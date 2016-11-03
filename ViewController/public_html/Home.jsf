@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+        xmlns:h="http://java.sun.com/jsf/html">
+    <af:document title="Home.jsf" id="d1">
+        <af:form id="f1">
+            <af:pageTemplate viewId="/WEB-INF/templates/defaultTemplate.jsf" value="#{bindings.ptb1}" id="pt1">
+                <f:facet name="Heading"/>
+                <f:facet name="Footer"/>
+                <f:facet name="Main Content"/>
+                <f:facet name="Left Menus"/>
+            </af:pageTemplate>
+            <af:panelSplitter id="ps1" inlineStyle="height:100%;" splitterPosition="133" styleClass="AFStretchWidth">
+                <f:facet name="first">
+                    <af:panelBox text="Menu" id="pb1" inlineStyle="height:1215px;">
+                        <af:button text="HOME" id="b1">
+                            <af:setPropertyListener from="HOME" to="#{viewScope.DynamicRegionBean.currentTF}"
+                                                    type="action"/>
+                         </af:button>                           
+                        <af:spacer width="10" height="10" id="s1"/>
+                        <af:button text="ACCOUNTS" id="b2">
+                             <af:setPropertyListener from="ACCOUNTS" to="#{viewScope.DynamicRegionBean.currentTF}"
+                                                    type="action"/>
+                         </af:button>                           
+                        <af:spacer width="10" height="10" id="s2"/>
+                        <af:button text="CONTACTS" id="b3">
+                            <af:setPropertyListener from="CONTACTS" to="#{viewScope.DynamicRegionBean.currentTF}"
+                                                    type="action"/>
+                        </af:button>
+                    </af:panelBox>
+                </f:facet>
+                <f:facet name="second">
+                    <af:region value="#{bindings.dynamicRegion1.regionModel}" id="r1"/>
+                </f:facet>
+            </af:panelSplitter>
+        </af:form>
+    </af:document>
+</f:view>
