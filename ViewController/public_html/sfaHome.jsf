@@ -2,6 +2,7 @@
 <!DOCTYPE html>
 <f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
     <af:document title="sfaHome.jsf" id="d1">
+        <af:messages id="m1"/>
         <af:form id="f1">
             <af:pageTemplate viewId="/sfaTemplate.jsf" value="#{bindings.ptb1}" id="pt1">
                 <f:facet name="center">
@@ -15,14 +16,264 @@
                             <af:panelSplitter id="ps2" orientation="vertical">
                                 <f:facet name="first">
                                     <af:panelCollection id="pc1">
-                                        <f:facet name="menus"/>
+                                        <f:facet name="menus">
+                                            <af:menu text="My Options" id="m2" detachable="true">
+                                                <af:commandMenuItem text="Export to Excel" id="cmi1">
+                                                    <af:exportCollectionActionListener type="excelHTML"
+                                                                                       exportedId="t1"/>
+                                                </af:commandMenuItem>
+                                            </af:menu>
+                                        </f:facet>
                                         <f:facet name="toolbar"/>
+                                        <af:table value="#{bindings.CustomerContactView1.collectionModel}" var="row"
+                                                  rows="#{bindings.CustomerContactView1.rangeSize}"
+                                                  emptyText="#{bindings.CustomerContactView1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                                                  rowBandingInterval="0"
+                                                  selectedRowKeys="#{bindings.CustomerContactView1.collectionModel.selectedRow}"
+                                                  selectionListener="#{bindings.CustomerContactView1.collectionModel.makeCurrent}"
+                                                  rowSelection="single"
+                                                  fetchSize="#{bindings.CustomerContactView1.rangeSize}" id="t1"
+                                                  editingMode="clickToEdit" columnStretching="last">
+                                            <af:column sortProperty="#{bindings.CustomerContactView1.hints.ContactId.name}"
+                                                       sortable="true"
+                                                       headerText="#{bindings.CustomerContactView1.hints.ContactId.label}"
+                                                       id="c1">
+                                                <af:outputText value="#{row.ContactId}"
+                                                               shortDesc="#{bindings.CustomerContactView1.hints.ContactId.tooltip}"
+                                                               id="ot1">
+                                                    <af:convertNumber groupingUsed="false"
+                                                                      pattern="#{bindings.CustomerContactView1.hints.ContactId.format}"/>
+                                                </af:outputText>
+                                            </af:column>
+                                            <af:column sortProperty="#{bindings.CustomerContactView1.hints.FirstName.name}"
+                                                       sortable="true"
+                                                       headerText="#{bindings.CustomerContactView1.hints.FirstName.label}"
+                                                       id="c2">
+                                                <af:outputText value="#{row.FirstName}"
+                                                               shortDesc="#{bindings.CustomerContactView1.hints.FirstName.tooltip}"
+                                                               id="ot2"/>
+                                            </af:column>
+                                            <af:column sortProperty="#{bindings.CustomerContactView1.hints.MiddleName.name}"
+                                                       sortable="true"
+                                                       headerText="#{bindings.CustomerContactView1.hints.MiddleName.label}"
+                                                       id="c3">
+                                                <af:outputText value="#{row.MiddleName}"
+                                                               shortDesc="#{bindings.CustomerContactView1.hints.MiddleName.tooltip}"
+                                                               id="ot3"/>
+                                            </af:column>
+                                            <af:column sortProperty="#{bindings.CustomerContactView1.hints.Title.name}"
+                                                       sortable="true"
+                                                       headerText="#{bindings.CustomerContactView1.hints.Title.label}"
+                                                       id="c4">
+                                                <af:outputText value="#{row.Title}"
+                                                               shortDesc="#{bindings.CustomerContactView1.hints.Title.tooltip}"
+                                                               id="ot4"/>
+                                            </af:column>
+                                            <af:column sortProperty="#{bindings.CustomerContactView1.hints.LastName.name}"
+                                                       sortable="true"
+                                                       headerText="#{bindings.CustomerContactView1.hints.LastName.label}"
+                                                       id="c5">
+                                                <af:outputText value="#{row.LastName}"
+                                                               shortDesc="#{bindings.CustomerContactView1.hints.LastName.tooltip}"
+                                                               id="ot5"/>
+                                            </af:column>
+                                            <af:column sortProperty="#{bindings.CustomerContactView1.hints.AddressId.name}"
+                                                       sortable="true"
+                                                       headerText="#{bindings.CustomerContactView1.hints.AddressId.label}"
+                                                       id="c6">
+                                                <af:outputText value="#{row.AddressId}"
+                                                               shortDesc="#{bindings.CustomerContactView1.hints.AddressId.tooltip}"
+                                                               id="ot6">
+                                                    <af:convertNumber groupingUsed="false"
+                                                                      pattern="#{bindings.CustomerContactView1.hints.AddressId.format}"/>
+                                                </af:outputText>
+                                            </af:column>
+                                            <af:column sortProperty="#{bindings.CustomerContactView1.hints.AccountId.name}"
+                                                       sortable="true"
+                                                       headerText="#{bindings.CustomerContactView1.hints.AccountId.label}"
+                                                       id="c7">
+                                                <af:outputText value="#{row.AccountId}"
+                                                               shortDesc="#{bindings.CustomerContactView1.hints.AccountId.tooltip}"
+                                                               id="ot7">
+                                                    <af:convertNumber groupingUsed="false"
+                                                                      pattern="#{bindings.CustomerContactView1.hints.AccountId.format}"/>
+                                                </af:outputText>
+                                            </af:column>
+                                            <af:column sortProperty="#{bindings.CustomerContactView1.hints.DepartmentId.name}"
+                                                       sortable="true"
+                                                       headerText="#{bindings.CustomerContactView1.hints.DepartmentId.label}"
+                                                       id="c8">
+                                                <af:outputText value="#{row.DepartmentId}"
+                                                               shortDesc="#{bindings.CustomerContactView1.hints.DepartmentId.tooltip}"
+                                                               id="ot8">
+                                                    <af:convertNumber groupingUsed="false"
+                                                                      pattern="#{bindings.CustomerContactView1.hints.DepartmentId.format}"/>
+                                                </af:outputText>
+                                            </af:column>
+                                            <af:column sortProperty="#{bindings.CustomerContactView1.hints.WorkPhone.name}"
+                                                       sortable="true"
+                                                       headerText="#{bindings.CustomerContactView1.hints.WorkPhone.label}"
+                                                       id="c9">
+                                                <af:outputText value="#{row.WorkPhone}"
+                                                               shortDesc="#{bindings.CustomerContactView1.hints.WorkPhone.tooltip}"
+                                                               id="ot9"/>
+                                            </af:column>
+                                            <af:column sortProperty="#{bindings.CustomerContactView1.hints.MobilePhone.name}"
+                                                       sortable="true"
+                                                       headerText="#{bindings.CustomerContactView1.hints.MobilePhone.label}"
+                                                       id="c10">
+                                                <af:outputText value="#{row.MobilePhone}"
+                                                               shortDesc="#{bindings.CustomerContactView1.hints.MobilePhone.tooltip}"
+                                                               id="ot10"/>
+                                            </af:column>
+                                            <af:column sortProperty="#{bindings.CustomerContactView1.hints.Email.name}"
+                                                       sortable="true"
+                                                       headerText="#{bindings.CustomerContactView1.hints.Email.label}"
+                                                       id="c11">
+                                                <af:outputText value="#{row.Email}"
+                                                               shortDesc="#{bindings.CustomerContactView1.hints.Email.tooltip}"
+                                                               id="ot11"/>
+                                            </af:column>
+                                            <af:column sortProperty="#{bindings.CustomerContactView1.hints.InfluenceLevel.name}"
+                                                       sortable="true"
+                                                       headerText="#{bindings.CustomerContactView1.hints.InfluenceLevel.label}"
+                                                       id="c12">
+                                                <af:outputText value="#{row.InfluenceLevel}"
+                                                               shortDesc="#{bindings.CustomerContactView1.hints.InfluenceLevel.tooltip}"
+                                                               id="ot12">
+                                                    <af:convertNumber groupingUsed="false"
+                                                                      pattern="#{bindings.CustomerContactView1.hints.InfluenceLevel.format}"/>
+                                                </af:outputText>
+                                            </af:column>
+                                            <af:column sortProperty="#{bindings.CustomerContactView1.hints.IsPrimaryContact.name}"
+                                                       sortable="true"
+                                                       headerText="#{bindings.CustomerContactView1.hints.IsPrimaryContact.label}"
+                                                       id="c13">
+                                                <af:outputText value="#{row.IsPrimaryContact}"
+                                                               shortDesc="#{bindings.CustomerContactView1.hints.IsPrimaryContact.tooltip}"
+                                                               id="ot13"/>
+                                            </af:column>
+                                            <af:column sortProperty="#{bindings.CustomerContactView1.hints.Description.name}"
+                                                       sortable="true"
+                                                       headerText="#{bindings.CustomerContactView1.hints.Description.label}"
+                                                       id="c14">
+                                                <af:outputText value="#{row.Description}"
+                                                               shortDesc="#{bindings.CustomerContactView1.hints.Description.tooltip}"
+                                                               id="ot14"/>
+                                            </af:column>
+                                        </af:table>
                                         <f:facet name="statusbar"/>
                                     </af:panelCollection>
                                 </f:facet>
                                 <f:facet name="second">
                                     <af:panelTabbed position="above" id="pt2">
-                                        <af:showDetailItem id="tab1" text="Result Contacts"/>
+                                        <af:showDetailItem id="tab1" text="Result Contacts">
+                                            <af:panelFormLayout id="pfl1">
+                                                <af:inputText value="#{bindings.ContactId.inputValue}"
+                                                              label="#{bindings.ContactId.hints.label}"
+                                                              required="#{bindings.ContactId.hints.mandatory}"
+                                                              columns="#{bindings.ContactId.hints.displayWidth}"
+                                                              maximumLength="#{bindings.ContactId.hints.precision}"
+                                                              shortDesc="#{bindings.ContactId.hints.tooltip}" id="it1">
+                                                    <f:validator binding="#{bindings.ContactId.validator}"/>
+                                                    <af:convertNumber groupingUsed="false"
+                                                                      pattern="#{bindings.ContactId.format}"/>
+                                                </af:inputText>
+                                                <af:inputText value="#{bindings.FirstName.inputValue}"
+                                                              label="#{bindings.FirstName.hints.label}"
+                                                              required="#{bindings.FirstName.hints.mandatory}"
+                                                              columns="#{bindings.FirstName.hints.displayWidth}"
+                                                              maximumLength="#{bindings.FirstName.hints.precision}"
+                                                              shortDesc="#{bindings.FirstName.hints.tooltip}" id="it2">
+                                                    <f:validator binding="#{bindings.FirstName.validator}"/>
+                                                </af:inputText>
+                                                <af:inputText value="#{bindings.Title.inputValue}"
+                                                              label="#{bindings.Title.hints.label}"
+                                                              required="#{bindings.Title.hints.mandatory}"
+                                                              columns="#{bindings.Title.hints.displayWidth}"
+                                                              maximumLength="#{bindings.Title.hints.precision}"
+                                                              shortDesc="#{bindings.Title.hints.tooltip}" id="it3">
+                                                    <f:validator binding="#{bindings.Title.validator}"/>
+                                                </af:inputText>
+                                                <af:inputText value="#{bindings.LastName.inputValue}"
+                                                              label="#{bindings.LastName.hints.label}"
+                                                              required="#{bindings.LastName.hints.mandatory}"
+                                                              columns="#{bindings.LastName.hints.displayWidth}"
+                                                              maximumLength="#{bindings.LastName.hints.precision}"
+                                                              shortDesc="#{bindings.LastName.hints.tooltip}" id="it4">
+                                                    <f:validator binding="#{bindings.LastName.validator}"/>
+                                                </af:inputText>
+                                                <af:inputText value="#{bindings.AccountId.inputValue}"
+                                                              label="#{bindings.AccountId.hints.label}"
+                                                              required="#{bindings.AccountId.hints.mandatory}"
+                                                              columns="#{bindings.AccountId.hints.displayWidth}"
+                                                              maximumLength="#{bindings.AccountId.hints.precision}"
+                                                              shortDesc="#{bindings.AccountId.hints.tooltip}" id="it5">
+                                                    <f:validator binding="#{bindings.AccountId.validator}"/>
+                                                    <af:convertNumber groupingUsed="false"
+                                                                      pattern="#{bindings.AccountId.format}"/>
+                                                </af:inputText>
+                                                <af:inputText value="#{bindings.DepartmentId.inputValue}"
+                                                              label="#{bindings.DepartmentId.hints.label}"
+                                                              required="#{bindings.DepartmentId.hints.mandatory}"
+                                                              columns="#{bindings.DepartmentId.hints.displayWidth}"
+                                                              maximumLength="#{bindings.DepartmentId.hints.precision}"
+                                                              shortDesc="#{bindings.DepartmentId.hints.tooltip}"
+                                                              id="it6">
+                                                    <f:validator binding="#{bindings.DepartmentId.validator}"/>
+                                                    <af:convertNumber groupingUsed="false"
+                                                                      pattern="#{bindings.DepartmentId.format}"/>
+                                                </af:inputText>
+                                                <af:inputText value="#{bindings.WorkPhone.inputValue}"
+                                                              label="#{bindings.WorkPhone.hints.label}"
+                                                              required="#{bindings.WorkPhone.hints.mandatory}"
+                                                              columns="#{bindings.WorkPhone.hints.displayWidth}"
+                                                              maximumLength="#{bindings.WorkPhone.hints.precision}"
+                                                              shortDesc="#{bindings.WorkPhone.hints.tooltip}" id="it7">
+                                                    <f:validator binding="#{bindings.WorkPhone.validator}"/>
+                                                </af:inputText>
+                                                <af:inputText value="#{bindings.MobilePhone.inputValue}"
+                                                              label="#{bindings.MobilePhone.hints.label}"
+                                                              required="#{bindings.MobilePhone.hints.mandatory}"
+                                                              columns="#{bindings.MobilePhone.hints.displayWidth}"
+                                                              maximumLength="#{bindings.MobilePhone.hints.precision}"
+                                                              shortDesc="#{bindings.MobilePhone.hints.tooltip}"
+                                                              id="it8">
+                                                    <f:validator binding="#{bindings.MobilePhone.validator}"/>
+                                                </af:inputText>
+                                                <af:inputText value="#{bindings.Email.inputValue}"
+                                                              label="#{bindings.Email.hints.label}"
+                                                              required="#{bindings.Email.hints.mandatory}"
+                                                              columns="#{bindings.Email.hints.displayWidth}"
+                                                              maximumLength="#{bindings.Email.hints.precision}"
+                                                              shortDesc="#{bindings.Email.hints.tooltip}" id="it9">
+                                                    <f:validator binding="#{bindings.Email.validator}"/>
+                                                </af:inputText>
+                                                <af:inputText value="#{bindings.InfluenceLevel.inputValue}"
+                                                              label="#{bindings.InfluenceLevel.hints.label}"
+                                                              required="#{bindings.InfluenceLevel.hints.mandatory}"
+                                                              columns="#{bindings.InfluenceLevel.hints.displayWidth}"
+                                                              maximumLength="#{bindings.InfluenceLevel.hints.precision}"
+                                                              shortDesc="#{bindings.InfluenceLevel.hints.tooltip}"
+                                                              id="it10">
+                                                    <f:validator binding="#{bindings.InfluenceLevel.validator}"/>
+                                                    <af:convertNumber groupingUsed="false"
+                                                                      pattern="#{bindings.InfluenceLevel.format}"/>
+                                                </af:inputText>
+                                                <af:inputText value="#{bindings.IsPrimaryContact.inputValue}"
+                                                              label="#{bindings.IsPrimaryContact.hints.label}"
+                                                              required="#{bindings.IsPrimaryContact.hints.mandatory}"
+                                                              columns="#{bindings.IsPrimaryContact.hints.displayWidth}"
+                                                              maximumLength="#{bindings.IsPrimaryContact.hints.precision}"
+                                                              shortDesc="#{bindings.IsPrimaryContact.hints.tooltip}"
+                                                              id="it11">
+                                                    <f:validator binding="#{bindings.IsPrimaryContact.validator}"/>
+                                                </af:inputText>
+                                                <f:facet name="footer">
+                                                    <af:button text="Submit" id="b1"/>
+                                                </f:facet>
+                                            </af:panelFormLayout>
+                                        </af:showDetailItem>
                                         <af:showDetailItem text="Influence Level" id="sdi1"/>
                                     </af:panelTabbed>
                                 </f:facet>

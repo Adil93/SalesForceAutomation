@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <af:document title="HomeSfa.jsf" id="d1">
+        <af:form id="f1">
+            <af:pageTemplate viewId="/sfaTemplate.jsf" value="#{bindings.ptb1}" id="pt1">
+                <f:facet name="center">
+                    <af:panelSplitter id="ps1">
+                        <f:facet name="first">
+                            <af:panelAccordion discloseMany="false" id="pa1">
+                                <af:showDetailItem id="pane1" text="MENU" inlineStyle="color:Blue;"/>
+                            </af:panelAccordion>
+                        </f:facet>
+                        <f:facet name="second"/>
+                    </af:panelSplitter>
+                </f:facet>
+            </af:pageTemplate>
+        </af:form>
+    </af:document>
+</f:view>
